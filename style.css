@@ -1,0 +1,717 @@
+label {
+font-weight: bolder;
+width: 90vw;
+text-align: center;
+}
+
+td:hover {
+border-width: 3px;
+font-weight: bolder;
+}
+td:active {
+border-width: 3px;
+font-weight: bolder;
+}
+td:focus {
+border-width: 3px;
+font-weight: bolder;
+}
+.lebel{
+position: fixed;
+top: 5vh;
+height: 20px;
+background-color: chartreuse;
+
+}
+.design {
+  width: 10vw;
+  position: fixed;
+  left: 10px;
+  top: 10vh;
+}
+.design2 {
+  width: 10vw;
+  position: fixed;
+  right: 10px;
+  top: 10vh;
+}
+  html {
+    box-sizing: border-box;
+  }
+  
+
+  .topest {
+    width: 90vw;
+    height: 5vh;
+    color: transparent;
+  }
+  .clear {
+    width: 90vw;
+    height: 25px;
+    background-color: chocolate;
+    border: 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+ 
+  }
+  .check {
+    width: 90vw;
+    height: 25px;
+    background-color: aqua;
+    border: 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+ 
+  }
+  .clue {
+    width: 90vw;
+    height: 25px;
+    background-color: orange;
+    border: 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+ 
+  }
+  .clear:hover,  .check:hover,  .clue:hover {
+    opacity: .50;
+    font-weight: bolder;
+  }
+
+.problemtext {
+width: 90vw;
+background-color: lightgoldenrodyellow;
+height: 20vh;
+word-spacing: 4px;
+font-size: 20px;
+letter-spacing: 4px;
+}
+.answer {
+width: 90vw;
+background-color: #FFC26E;
+height: 5vh;
+word-spacing: 4px;
+font-size: 20px;
+letter-spacing: 4px;
+text-align: center;
+}
+  
+  .instructions{
+  width: 90vw;
+  height: 400px;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  background-color: bisque;
+
+  
+  vertical-align: top;
+  }
+  
+  .factoss {
+    width: 90vw;
+    height: 50vh;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    background-color: bisque;
+  
+    
+    vertical-align: top;
+  }
+
+  .instructionsfornotfactoring{
+    width: 90vw;
+    height: 400px;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    background-color: bisque;
+  margin-left: 0;
+    vertical-align: top;
+    margin-bottom: 10px;
+    }
+    .instructionforfactoringintermediate{
+      width: 90vw;
+      height: 400px;
+      border-style: solid;
+      border-color: black;
+      border-width: 3px;
+      background-color: bisque;
+    margin-left: 0;
+      vertical-align: top;
+      margin-bottom: 10px;
+      }
+
+      .instructionforfactoringadvance{
+        width: 90vw;
+        height: 400px;
+        border-style: solid;
+        border-color: black;
+        border-width: 3px;
+        background-color: bisque;
+      margin-left: 0;
+        vertical-align: top;
+        margin-bottom: 10px;
+        }
+    .multt {
+      width: 90vw;
+      height:400px;
+      border-style: solid;
+      border-color: black;
+      border-width: 3px;
+      background-color: bisque;
+    margin-left: 0;
+      vertical-align: top;
+      margin-bottom: 10px;
+    }
+    #table-addition,#multiplicationgameproductdivisor, #table-subtraction, #subtractiondifference, #multiplicationproduct, #table-multiplication, #problemandguide, #table-additiongame, #additiongamesum, #table-subtractiongame, #subtractiongamedifference, #multiplicationgameproduct, #table-multiplicationgame, #table-divisiongame, #divisiongamequotient, #table-additionintermediate, #additionintermediatesum, #table-additionadvance, #additionadvancesum, #table-subtractionintermediate, #table-subtractionadvance,#subtractionintermediatedifference, #subtractionadvancedifference, #table-multiplicationadvance, #table-multiplicationintermediate,#problemadvanceandguideadvance, #problemintermediateandguideintermediate, #multiplicationadvanceproduct, #multiplicationintermediateproduct, #divisiongameproblemtable  {
+      width: 90vw;
+      height: auto;
+      margin-top: 10px;
+    }
+    #problemandguide {
+      display: none;
+      width: 90vw;
+    }
+
+  #factorslistfinder {
+    width: 90vw;
+    height: 400px;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  background-color: rgb(241, 191, 130);
+margin-top: 10px;
+margin-bottom: 10px;
+  vertical-align: top;
+  padding-top: 20px;
+  font-weight: bold;
+
+  }
+  #factorsintermediatelistfinder {
+    width: 90vw;
+    height: 400px;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  background-color: rgb(241, 191, 130);
+margin-top: 10px;
+margin-bottom: 10px;
+  vertical-align: top;
+  padding-top: 20px;
+  font-weight: bold;
+
+  }
+  #factorsadvancelistfinder {
+    width: 90vw;
+    height: 400px;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  background-color: rgb(241, 191, 130);
+margin-top: 10px;
+margin-bottom: 10px;
+  vertical-align: top;
+  padding-top: 20px;
+  font-weight: bold;
+
+  }
+  #exponenttab {
+    width: 90vw;
+  }
+  #a, #b {
+    width: 40%;
+  }
+  .gif {
+    width: 60vw;
+    height: auto;
+  }
+  #factorpairsgametab {
+    width: 90vw;
+    height: 500px;
+  border-style: solid;
+  border-color: rgb(22, 21, 21);
+  border-width: 3px;
+  background-color: rgb(241, 191, 130);
+  margin-top: 10px;
+font-weight: bold;
+  vertical-align: top;
+  padding-top: 20px;
+  margin-bottom: 10px;
+
+  }
+  #multifactorpairsgametab {
+    width: 90vw;
+    height: 500px;
+  border-style: solid;
+  border-color: rgb(22, 21, 21);
+  border-width: 3px;
+  background-color: rgb(241, 191, 130);
+  margin-top: 10px;
+font-weight: bold;
+  vertical-align: top;
+  padding-top: 20px;
+  margin-bottom: 10px;
+
+  }
+  
+  .tabletitle {
+    background-color: bisque;
+  }
+  h3{
+    margin: 10px;
+  }
+  #additiontab {
+    margin: 0;
+    padding: 0;
+  }
+  .center {
+    text-align: center;
+  }
+  .centeritem {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  .tabss {
+    width: 100%;
+    height: auto;
+  }
+  .polytabimg {
+    width: 80vw;
+    height: auto;
+  }
+  
+  .polytabimgsmall{
+    width: 60vw;
+    height: auto;
+    margin-bottom: 30px;
+margin-top: 30px;
+  }
+  .title {
+    font-family: Cambria, Georgia, serif;
+    font-size: 12vw;
+    padding: 0;
+  }
+  h2{
+    font-family: Cambria, Georgia, serif;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .subtitle {
+    font-family: Cambria, Georgia, serif;
+    font-size: 7vw;
+    color: maroon;
+  }
+  .continue {
+    width: 50vw;
+    height: 6vh;
+    background-color: blueviolet;
+    font-size: 5vw;
+    border: 0;
+    font-weight: bold;
+  }
+  
+  .hide {
+      display: none;
+  }
+  .block {
+      display: block;
+  }
+  table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+ 
+    display: block;
+
+  }
+  td, th{
+    border: 1px solid rgb(5, 5, 5);
+    padding: 8px;
+    height: 20px;
+    width: 1%;
+    text-align: center;
+    font-weight: bold;
+    }
+    .blue {
+   background-color: antiquewhite;
+    }
+  .red {
+   background-color: greenyellow;
+  }
+  
+  .green {
+   background-color: aqua;
+  }
+  .yellow{
+    background-color: yellow;
+  }
+  .pink{
+    background-color: pink;
+  }
+  .bluegreen{
+    background-color: aquamarine;
+  }
+  .violet{
+    background-color: violet;
+  }
+  .orange {
+    background-color: crimson;
+  }
+  .yellowgreen {
+    background-color: yellowgreen;
+  }
+  .tomato {
+    background-color: tomato;
+  }
+  .mediumaquamarine {
+    background-color: mediumaquamarine;
+  }
+  .brown {
+    background-color: brown;
+  }
+  
+  .coral {
+    background-color: coral;
+  }
+  .crimson {
+    background-color: crimson;
+  }
+  .teal {
+    background-color: teal;
+  }
+  .chartreuse {
+    background-color: chartreuse;
+  }
+  .cornsilk {
+    background-color: cornsilk;
+  }
+  .darkgoldenrod {
+    background-color: darkgoldenrod;
+  }
+  .darksalmon {
+    background-color: darksalmon;
+  }
+    #positivemessage, #negativemessage {
+      display: none;
+      color: teal;
+      height: 20vh;
+      width: 90vw;
+      position: fixed;
+      top: 40vh;
+      left: 4vh;
+      background-color: #f5e8b5;
+      text-align: center;
+      padding: 5vh 0 0 0;
+      font-size: 5vh;
+      font-weight: bold;
+      z-index: 9;
+  }
+
+  .mode {
+    width: 50vw;
+    height: 7vh;
+    background-color: greenyellow;
+    font-size: 18px;
+    border: 0;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-top: 20px;
+    font-family: Cambria, Georgia, serif;
+    font-weight: bold;
+  }
+  
+  .operation {
+    width: 50vw;
+    height: 6vh;
+    background-color: greenyellow;
+    font-size: 18px;
+    border: 0;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-top: 15px;
+    font-family: Cambria, Georgia, serif;
+    font-weight: bold;
+  }
+  .fullwidth {
+    width: 100%;
+  }
+  .blanktab {
+    height: 100px;
+  }
+  .radio{
+    display: none;
+  }
+  label:hover {
+    color: gray;
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: peachpuff;
+  }
+  .block{
+    display: block;
+  }
+  
+  .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    margin: 0;
+    margin-left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+  }
+
+  
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    width: 25%;
+  }
+  
+
+  .tab button:hover {
+    background-color: #ddd;
+font-weight: bolder;
+  }
+  
+ 
+  .tab button.active {
+    background-color: #ccc;
+font-weight: bolder;
+  }
+  .data {
+    width: 50px;
+  }
+  select {
+    width: 200px;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  #additionsum {
+    width: 90vw;
+  }
+  div {
+    margin: 0;
+  }
+
+
+@media screen and (min-width: 800px) {
+
+  /*INVISIBLE TOP PART*/
+  .topest {
+    width: 90vw;
+    height: 5vh;
+    color: transparent;
+  }
+
+  /*WELCOME TO PART*/
+  .title {
+    font-family: Cambria, Georgia, serif;
+    font-size: 6vw;
+    color: maroon;
+    margin: 0;
+    margin-top: 4vh;
+  }
+
+  /*POLYTAB IMAGE*/
+  .polytabimg {
+    width: 45vw;
+    height: auto;
+  }
+  
+  .polytabimgsmall{
+    width: 20vw;
+    height: auto;
+    margin-bottom: 30px;
+margin-top: 30px;
+  }
+
+  /*A 2ST CENTURY DEVICE TITLE*/
+  .subtitle {
+    font-family: Cambria, Georgia, serif;
+    font-size: 5vw;
+    color: maroon;
+    padding-left: 2vw;
+  }
+/*CONTINUE BUTTON*/
+  .continue {
+    width: 50vw;
+    height: 7vh;
+    background-color: blueviolet;
+    font-size: 2vw;
+    border: 0;
+    font-weight: bold;
+  }
+
+  .continue:hover {
+    background-color: rgb(31, 17, 44);
+    color: white;
+    font-weight: bold;
+  }
+
+  /*TEACHING OR LEARNING MODE*/
+
+  .mode {
+    width: 50vw;
+    height: 8vh;
+    background-color: greenyellow;
+    font-size: 6vh;
+    border: 0;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-top: 4px;
+    font-family: Cambria, Georgia, serif;
+    font-weight: bold;
+  }
+
+  .operation {
+    width: 50vw;
+    height: 8vh;
+    background-color: greenyellow;
+    font-size: 6vh;
+    border: 0;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-top: 4px;
+    font-family: Cambria, Georgia, serif;
+    font-weight: bold;
+  }
+
+.instructionsfornotfactoring{
+  height: 400px;
+  width: 90vw;
+}
+
+#multifactoringtab {
+    width: 50%;
+}
+.tabss {
+  width: 100%;
+  height: auto;
+}
+#table-addition,#multiplicationgameproductdivisor, #table-subtraction, #subtractiondifference, #multiplicationproduct, #table-multiplication, #problemandguide, #table-additiongame, #additiongamesum, #table-subtractiongame, #subtractiongamedifference, #multiplicationgameproduct, #table-multiplicationgame, #table-divisiongame, #divisiongamequotient, #table-additionintermediate, #additionintermediatesum, #table-additionadvance, #additionadvancesum, #table-subtractionintermediate, #table-subtractionadvance,#subtractionintermediatedifference, #subtractionadvancedifference, #table-multiplicationadvance, #table-multiplicationintermediate,#problemadvanceandguideadvance, #problemadvanceandguideintermediate, #multiplicationadvanceproduct, #divisiongameproblemtable   {
+  width: 90vw;
+  height: auto;
+  margin-top: 10px;
+}
+
+.clear {
+  width: 90vw;
+  height: 30px;
+  background-color: chocolate;
+  border: 0;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+.check {
+  width: 90vw;
+  height: 30px;
+  background-color: aqua;
+  border: 0;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+.clue {
+  width: 90vw;
+  height: 30px;
+  background-color: orange;
+  border: 0;
+  font-size: 20px;
+  font-weight: bold;
+
+
+}
+.instructions{
+  width: 90vw;
+  height: 400px;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  background-color: bisque;
+
+  
+  vertical-align: top;
+  }
+
+  .factoss {
+    width: 90vw;
+    height: 50vh;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    background-color: bisque;
+  
+    
+    vertical-align: top;
+  }
+
+.lebel{
+position: fixed;
+top: 5vh;
+height: 20px;
+background-color: chartreuse;
+
+}
+
+  .multt {
+    width: 90vw;
+    height: 400px;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    background-color: bisque;
+  margin-left: 0;
+    vertical-align: top;
+    margin-bottom: 10px;
+  }
+    #positivemessage, #negativemessage {
+      display: none;
+      color: teal;
+      height: 50vh;
+      width: 90vw;
+      position: fixed;
+      top: 20vh;
+      left: 5vh;
+      background-color: #f5e8b5;
+      text-align: center;
+      padding: 5vh 0 0 0;
+      font-size: 10vh;
+      font-weight: bold;
+      z-index: 9;
+  }
+td:hover {
+border-width: 3px;
+font-weight: bolder;
+}
+td:active {
+border-width: 3px;
+font-weight: bolder;
+}
+td:focus {
+border-width: 3px;
+font-weight: bolder;
+}
+li {
+font-size: 25px;
+}
+}
+

@@ -1,0 +1,2581 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class="topest">
+        <p></p>
+    </div>
+    <!--UPPER MENU TAB-->
+
+    <div class="tab">
+        <button class="tablinks" onclick="home()">HOME</button>
+        <button class="tablinks" onclick="mode()">MODE</button>
+        <button class="tablinks" onclick="levelof()">LEARNING LEVEL</button>
+        <button class="tablinks" onclick="operation()">OPERATION</button>
+    </div>
+    <!--Welcome Tab-->
+    <div id="welcomeTab" class="tohide">
+  <div class="centeritem">
+        <img src="download.png" alt="Poly Tab" class="design">
+    </div>
+    <div class="centeritem">
+        <img src="download2.png" alt="Poly Tab" class="design2">
+    </div> 
+        <h1 class="center title">Welcome to</h1>
+        <div class="centeritem">
+            <img src="polytabcropped.png" alt="Poly Tab" class="polytabimg">
+        </div>
+        <h1 class="subtitle center">A 21st Century Mathematical Device</h1>
+        <div class="centeritem">
+            <button class="continue" onclick="hidewelcometab()">CONTINUE</button>
+        </div>
+        <div class="centeritem">
+            <img src="Mathanimate.gif" alt="Poly Tab"  class="gif">
+        </div>
+
+    </div>
+    <!--Tab to choose if Learning or teaching mode-->
+    <div class="hide tohide" id="teachingorlearningMode">
+  <div class="centeritem">
+        <img src="download.png" alt="Poly Tab" class="design">
+    </div>
+    <div class="centeritem">
+        <img src="download2.png" alt="Poly Tab" class="design2">
+    </div> 
+<div class="centeritem">
+            <img src="polytab.png" alt="Poly Tab" class="polytabimg">
+        </div>
+        <div class="blanktab"></div>
+
+        <div class="centeritem">
+            <label for="teachingmode" class="mode center">TEACHING MODE</label><input type="radio" name="selectMode"
+                id="teachingmode" class="radio" onclick="hidemode()">
+            <br>
+            <br>
+        </div>
+        <div class="centeritem">
+            <label for="learningmode" class="mode center">STUDENT MODE</label><input type="radio" name="selectMode"
+                id="learningmode" class="radio" onclick="hidelearningmode()">
+        </div>
+
+    </div>
+    <!--TAB TO CHOOSE LEVEL-->
+    <div class="hide tohide" id="leveltab">
+  <div class="centeritem">
+        <img src="download.png" alt="Poly Tab" class="design">
+    </div>
+    <div class="centeritem">
+        <img src="download2.png" alt="Poly Tab" class="design2">
+    </div> 
+        <div class="centeritem">
+            <img src="polytab.png" alt="Poly Tab" class="polytabimg">
+        </div>
+        <div class="centeritem">
+            <label for="beginnerlevel" class="mode center">BEGINNER</label><input type="radio" name="selectlevel"
+                id="beginnerlevel" class="radio" onclick="hidelevel()">
+            <br>
+        </div>
+        <div class="centeritem">
+            <label for="intermediatelevel" class="mode center">SELF-LEARNING</label><input type="radio"
+                name="selectlevel" id="intermediatelevel" class="radio" onclick="hidelevel()">
+            <br>
+        </div>
+        <div class="centeritem">
+            <label for="advancelevel" class="mode center">ADVANCE</label><input type="radio" name="selectlevel"
+                id="advancelevel" class="radio" onclick="hidelevel()">
+            <br>
+        </div>
+
+
+    </div>
+
+    <!--Tab to choose what operation to choose-->
+    <div id="operationtab" class="hide tohide">
+  <div class="centeritem">
+        <img src="download.png" alt="Poly Tab" class="design">
+    </div>
+    <div class="centeritem">
+        <img src="download2.png" alt="Poly Tab" class="design2">
+    </div> 
+        <div class="centeritem">
+            <img src="polytabcropped.png" alt="Poly Tab"
+                class="polytabimgsmall">
+        </div>
+        <div>
+            <div class="centeritem">
+                <label for="additionradio" class="operation center">ADDITION<input type="radio" name="operationradio"
+                        id="additionradio" class="radio" onclick="hideadditionoperationandchoosemode()"></label>
+            </div>
+            <div class="centeritem">
+                <label for="subtractionradio" class="operation center">SUBTRACTION<input type="radio"
+                        name="operationradio" id="subtractionradio" class="radio"
+                        onclick="hidesubtractionoperationandchoosemode()"></label>
+            </div>
+            <div class="centeritem">
+                <label for="multiplicationradio" class="operation center">MULTIPLICATION<input type="radio"
+                        name="operationradio" id="multiplicationradio" class="radio"
+                        onclick="hidemultiplicationoperationandchoosemode()"></label>
+            </div>
+            <div class="centeritem">
+                <label for="divisionradio" class="operation center">DIVISION<input type="radio" name="operationradio"
+                        id="divisionradio" class="radio" onclick="hidedivisionoperationandchoosemode()"></label>
+            </div>
+            <div class="centeritem">
+                <label for="factoringradio" class="operation center">FACTORING<input type="radio" name="operationradio"
+                        id="factoringradio" class="radio" onclick="hidefactoringoperationandchoosemode()"></label>
+            </div>
+        </div>
+    </div>
+
+    <!--ADDITION-->
+
+    <div id="additiontab" class="hide tohide">
+     <div class="centeritem">
+            <p class="lebel">ADDITION||STUDENT MODE||BEGINNER LEVEL</p>
+        </div>
+        <div class="centeritem">
+            <img src="polytabcropped.png" alt="Poly Tab"
+                class="polytabimgsmall">
+        </div>
+   
+        <div class="centeritem">
+            <div class="instructionsfornotfactoring" style="overflow-y:scroll; overflow-x:hidden;">
+                <h3>INSTRUCTIONS:</h3>
+                <div>
+                    <ol>
+                    <li>	Arrange the polynomial expression in descending order depending on the exponent </li>
+                    <li>	If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient</li>
+                    <li>	Get the coefficients of each term of the polynomial expressions</li>
+                    <li>Enter each coefficient in the first row and second row depending on the number of addends/subtrahend.</li>
+                    <li>The sum/difference will show at the bottom part of the table.</li>
+                    <li>To find the final answer, get the numbers in the sum/difference tab then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li>
+                        
+                    </ol>
+                </div>
+            </div>
+        </div>
+<div class="centeritem">
+<label>PROBLEM
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="problemtext"></textarea>
+</label>
+</div>
+<br>
+        <div class="centeritem tabss">
+            <table id="table-addition">
+                <tr class="tabletitle">
+                    <th colspan="6" class="tabletitle">ADDITION OF POLYNOMIALS</th>
+                </tr>
+                <tr>
+                    <td class="addition-row1 blue">0</td>
+                    <td class="addition-row1 red">0</td>
+                    <td class="addition-row1 green">0</td>
+                    <td class="addition-row1 yellow">0</td>
+                    <td class="addition-row1 pink">0</td>
+                    <td class="addition-row1 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="addition-row2 blue">0</td>
+                    <td class="addition-row2 red">0</td>
+                    <td class="addition-row2 green">0</td>
+                    <td class="addition-row2 yellow">0</td>
+                    <td class="addition-row2 pink">0</td>
+                    <td class="addition-row2 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="addition-row3 blue">0</td>
+                    <td class="addition-row3 red">0</td>
+                    <td class="addition-row3 green">0</td>
+                    <td class="addition-row3 yellow">0</td>
+                    <td class="addition-row3 pink">0</td>
+                    <td class="addition-row3 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="addition-row4 blue">0</td>
+                    <td class="addition-row4 red">0</td>
+                    <td class="addition-row4 green">0</td>
+                    <td class="addition-row4 yellow">0</td>
+                    <td class="addition-row4 pink">0</td>
+                    <td class="addition-row4 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="addition-row5 blue">0</td>
+                    <td class="addition-row5 red">0</td>
+                    <td class="addition-row5 green">0</td>
+                    <td class="addition-row5 yellow">0</td>
+                    <td class="addition-row5 pink">0</td>
+                    <td class="addition-row5 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="addition-row6 blue">0</td>
+                    <td class="addition-row6 red">0</td>
+                    <td class="addition-row6 green">0</td>
+                    <td class="addition-row6 yellow">0</td>
+                    <td class="addition-row6 pink">0</td>
+                    <td class="addition-row6 bluegreen">0</td>
+
+                </tr>
+
+            </table>
+        </div>
+        <br>
+        <!--SUM OF THE POLYNOMIALS-->
+        <div class="centeritem tabss">
+            <table id="additionsum">
+                <tr>
+                    <th id="desc" colspan="6" class="tabletitle">SUM</th>
+                </tr>
+                <tr>
+
+                    <td class="addition-sum blue">0</td>
+
+                    <td class="addition-sum red">0</td>
+
+                    <td class="addition-sum green">0</td>
+
+                    <td class="addition-sum yellow">0</td>
+
+                    <td class="addition-sum pink">0</td>
+
+                    <td class="addition-sum bluegreen">0</td>
+
+
+                </tr>
+
+
+            </table>
+        </div>
+<br>
+<div class="centeritem">
+<label><b>FINAL ANSWER</b>
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="answer"></textarea>
+</label>
+</div>
+<br>
+        <br>
+        <div class="centeritem leftside">
+            <button class="clear" onclick="clear3()">CLEAR</button>
+        </div>
+    </div>
+
+    <!--ADDITION-->
+
+    <div id="additionintermediatetab" class="hide tohide">
+        <div class="centeritem">
+            <img src="polytabcropped.png" alt="Poly Tab"
+                class="polytabimgsmall">
+        </div>
+        <div class="centeritem">
+            <p class="lebel">ADDITION||STUDENT MODE||SELF LEARNING</p>
+        </div>
+        <div class="centeritem">
+            <div class="instructionsfornotfactoring" style="overflow-y:scroll; overflow-x:hidden;">
+                <h3>INSTRUCTIONS:</h3>
+                <div>
+                    <ol>
+                        <li>	Arrange the polynomial expression in descending order depending on the exponent </li>
+                        <li>	If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient</li>
+                        <li>	Get the coefficients of each term of the polynomial expressions</li>
+                        <li>Enter each coefficient in the first row and second row depending on the number of addends/subtrahend.</li>
+                        <li>Enter your answer at the SUM tab and <span style="color: red;"><b><span style="color: red;"><b>PRESS ENTER</b></span></b></span> to check if your answer is correct</li>
+                        <li>To find the final answer, get the numbers in the sum/difference tab then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+<div class="centeritem">
+<label>PROBLEM
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="problemtext"></textarea>
+</label>
+</div>
+<br>
+        <div class="centeritem tabss">
+            <table id="table-additionintermediate">
+                <tr class="tabletitle">
+                    <th colspan="6" class="tabletitle">ADDITION OF POLYNOMIALS</th>
+                </tr>
+                <tr>
+                    <td class="additionintermediate-row1 blue">0</td>
+                    <td class="additionintermediate-row1 red">0</td>
+                    <td class="additionintermediate-row1 green">0</td>
+                    <td class="additionintermediate-row1 yellow">0</td>
+                    <td class="additionintermediate-row1 pink">0</td>
+                    <td class="additionintermediate-row1 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="additionintermediate-row2 blue">0</td>
+                    <td class="additionintermediate-row2 red">0</td>
+                    <td class="additionintermediate-row2 green">0</td>
+                    <td class="additionintermediate-row2 yellow">0</td>
+                    <td class="additionintermediate-row2 pink">0</td>
+                    <td class="additionintermediate-row2 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="additionintermediate-row3 blue">0</td>
+                    <td class="additionintermediate-row3 red">0</td>
+                    <td class="additionintermediate-row3 green">0</td>
+                    <td class="additionintermediate-row3 yellow">0</td>
+                    <td class="additionintermediate-row3 pink">0</td>
+                    <td class="additionintermediate-row3 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="additionintermediate-row4 blue">0</td>
+                    <td class="additionintermediate-row4 red">0</td>
+                    <td class="additionintermediate-row4 green">0</td>
+                    <td class="additionintermediate-row4 yellow">0</td>
+                    <td class="additionintermediate-row4 pink">0</td>
+                    <td class="additionintermediate-row4 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="additionintermediate-row5 blue">0</td>
+                    <td class="additionintermediate-row5 red">0</td>
+                    <td class="additionintermediate-row5 green">0</td>
+                    <td class="additionintermediate-row5 yellow">0</td>
+                    <td class="additionintermediate-row5 pink">0</td>
+                    <td class="additionintermediate-row5 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="additionintermediate-row6 blue">0</td>
+                    <td class="additionintermediate-row6 red">0</td>
+                    <td class="additionintermediate-row6 green">0</td>
+                    <td class="additionintermediate-row6 yellow">0</td>
+                    <td class="additionintermediate-row6 pink">0</td>
+                    <td class="additionintermediate-row6 bluegreen">0</td>
+
+                </tr>
+
+            </table>
+        </div>
+        <br>
+        <!--SUM OF THE POLYNOMIALS-->
+        <div class="centeritem tabss">
+            <table id="additionintermediatesum">
+                <tr>
+                    <th id="desc" colspan="6" class="tabletitle">SUM</th>
+                </tr>
+                <tr>
+
+                    <td class="additionintermediate-sum blue">0</td>
+                    <td class="additionintermediate-sum red">0</td>
+                    <td class="additionintermediate-sum green">0</td>
+                    <td class="additionintermediate-sum yellow">0</td>
+                    <td class="additionintermediate-sum pink">0</td>
+                    <td class="additionintermediate-sum bluegreen">0</td>
+
+                </tr>
+
+
+            </table>
+        </div>
+<br>
+<div class="centeritem">
+<label><b>FINAL ANSWER</b>
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="answer"></textarea>
+</label>
+</div>
+<br>
+        <br>
+        <div class="centeritem leftside">
+           
+            <button class="clear" onclick="clear3()">CLEAR</button>
+        </div>
+    </div>
+
+    <!--ADDITION-->
+
+    <div id="additionadvancetab" class="hide tohide">
+        <div class="centeritem">
+            <img src="polytabcropped.png" alt="Poly Tab"
+                class="polytabimgsmall">
+        </div>
+        <div class="centeritem">
+            <p class="lebel">ADDITION||STUDENT MODE||ADVANCE LEVEL</p>
+        </div>
+        <div class="centeritem">
+            <div class="instructionsfornotfactoring" style="overflow-y:scroll; overflow-x:hidden;">
+                <h3>INSTRUCTIONS:</h3>
+                <div>
+                    <ol>
+                        <li>	Arrange the polynomial expression in descending order depending on the exponent </li>
+                        <li>	If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient</li>
+                        <li>	Get the coefficients of each term of the polynomial expressions</li>
+
+                        <li>Enter each coefficient in the first row and second row depending on the number of addends/subtrahend.</li>
+                        <li>The sum/difference can be entered at the bottom part of the table.</li>
+                        <li>To find the final answer, get the numbers in the sum/difference tab then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+<div class="centeritem">
+<label>PROBLEM
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="problemtext"></textarea>
+</label>
+</div>
+<br>
+        <div class="centeritem tabss">
+            <table id="table-additionadvance">
+                <tr class="tabletitle">
+                    <th colspan="6" class="tabletitle">ADDITION OF POLYNOMIALS</th>
+                </tr>
+                <tr>
+                    <td class="additionadvance-row1 blue">0</td>
+                    <td class="additionadvance-row1 red">0</td>
+                    <td class="additionadvance-row1 green">0</td>
+                    <td class="additionadvance-row1 yellow">0</td>
+                    <td class="additionadvance-row1 pink">0</td>
+                    <td class="additionadvance-row1 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="additionadvance-row2 blue">0</td>
+                    <td class="additionadvance-row2 red">0</td>
+                    <td class="additionadvance-row2 green">0</td>
+                    <td class="additionadvance-row2 yellow">0</td>
+                    <td class="additionadvance-row2 pink">0</td>
+                    <td class="additionadvance-row2 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="additionadvance-row3 blue">0</td>
+                    <td class="additionadvance-row3 red">0</td>
+                    <td class="additionadvance-row3 green">0</td>
+                    <td class="additionadvance-row3 yellow">0</td>
+                    <td class="additionadvance-row3 pink">0</td>
+                    <td class="additionadvance-row3 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="additionadvance-row4 blue">0</td>
+                    <td class="additionadvance-row4 red">0</td>
+                    <td class="additionadvance-row4 green">0</td>
+                    <td class="additionadvance-row4 yellow">0</td>
+                    <td class="additionadvance-row4 pink">0</td>
+                    <td class="additionadvance-row4 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="additionadvance-row5 blue">0</td>
+                    <td class="additionadvance-row5 red">0</td>
+                    <td class="additionadvance-row5 green">0</td>
+                    <td class="additionadvance-row5 yellow">0</td>
+                    <td class="additionadvance-row5 pink">0</td>
+                    <td class="additionadvance-row5 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="additionadvance-row6 blue">0</td>
+                    <td class="additionadvance-row6 red">0</td>
+                    <td class="additionadvance-row6 green">0</td>
+                    <td class="additionadvance-row6 yellow">0</td>
+                    <td class="additionadvance-row6 pink">0</td>
+                    <td class="additionadvance-row6 bluegreen">0</td>
+
+                </tr>
+
+            </table>
+        </div>
+        <br>
+        <!--SUM OF THE POLYNOMIALS-->
+        <div class="centeritem tabss">
+            <table id="additionadvancesum">
+                <tr>
+                    <th id="desc" colspan="6" class="tabletitle">SUM</th>
+                </tr>
+                <tr>
+
+                    <td class="additionadvance-sum blue">0</td>
+                    <td class="additionadvance-sum red">0</td>
+                    <td class="additionadvance-sum green">0</td>
+                    <td class="additionadvance-sum yellow">0</td>
+                    <td class="additionadvance-sum pink">0</td>
+                    <td class="additionadvance-sum bluegreen">0</td>
+
+                </tr>
+
+
+            </table>
+        </div>
+<br>
+<div class="centeritem">
+<label><b>FINAL ANSWER</b>
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="answer"></textarea>
+</label>
+</div>
+<br>
+        <br>
+        <div class="centeritem leftside">
+            <button class="clear" onclick="clear3()">CLEAR</button>
+        </div>
+    </div>
+    <!--Subtraction-->
+    <div id="subtractiontab" class="hide tohide">
+        <div class="centeritem">
+            <img src="polytabcropped.png" alt="Poly Tab"
+                class="polytabimgsmall">
+        </div>
+        <div class="centeritem">
+            <p class="lebel">SUBTRACTION||STUDENT MODE||BEGINNER LEVEL</p>
+        </div>
+        <div class="centeritem rightside">
+            <div class="instructionsfornotfactoring"  style="overflow-y:scroll; overflow-x:hidden;">
+                <h3>INSTRUCTIONS:</h3>
+                <div>
+                    <ol>
+                        <li>	Arrange the polynomial expression in descending order depending on the exponent </li>
+                    <li>	If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient</li>
+                    <li>	Get the coefficients of each term of the polynomial expressions</li>
+
+                    <li>Enter each coefficient in the first row and second row depending on the number of addends/subtrahend.</li>
+                    <li>The sum/difference will show at the bottom part of the table.</li>
+                    <li>To find the final answer, get the numbers in the sum/difference tab then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+<div class="centeritem">
+<label>PROBLEM
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="problemtext"></textarea>
+</label>
+</div>
+<br>
+        <div class="centeritem tabss">
+            <table id="table-subtraction">
+                <tr class="tabletitle">
+                    <th colspan="6">SUBTRACTION OF POLYNOMIALS</th>
+                </tr>
+                <tr>
+                    <td class="subtraction-row1 blue">0</td>
+                    <td class="subtraction-row1 yellow">0</td>
+                    <td class="subtraction-row1 green">0</td>
+                    <td class="subtraction-row1 red">0</td>
+                    <td class="subtraction-row1 bluegreen">0</td>
+                    <td class="subtraction-row1 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtraction-row2 blue">0</td>
+                    <td class="subtraction-row2 yellow">0</td>
+                    <td class="subtraction-row2 green">0</td>
+                    <td class="subtraction-row2 red">0</td>
+                    <td class="subtraction-row2 bluegreen">0</td>
+                    <td class="subtraction-row2 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtraction-row3 blue">0</td>
+                    <td class="subtraction-row3 yellow">0</td>
+                    <td class="subtraction-row3 green">0</td>
+                    <td class="subtraction-row3 red">0</td>
+                    <td class="subtraction-row3 bluegreen">0</td>
+                    <td class="subtraction-row3 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtraction-row4 blue">0</td>
+                    <td class="subtraction-row4 yellow">0</td>
+                    <td class="subtraction-row4 green">0</td>
+                    <td class="subtraction-row4 red">0</td>
+                    <td class="subtraction-row4 bluegreen">0</td>
+                    <td class="subtraction-row4 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtraction-row5 blue">0</td>
+                    <td class="subtraction-row5 yellow">0</td>
+                    <td class="subtraction-row5 green">0</td>
+                    <td class="subtraction-row5 red">0</td>
+                    <td class="subtraction-row5 bluegreen">0</td>
+                    <td class="subtraction-row5 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtraction-row6 blue">0</td>
+                    <td class="subtraction-row6 yellow">0</td>
+                    <td class="subtraction-row6 green">0</td>
+                    <td class="subtraction-row6 red">0</td>
+                    <td class="subtraction-row6 bluegreen">0</td>
+                    <td class="subtraction-row6 pink">0</td>
+
+                </tr>
+
+            </table>
+        </div>
+        <br>
+        <div class="centeritem tabss">
+            <table id="subtractiondifference">
+                <tr>
+                    <th colspan="6" class="tabletitle">DIFFERENCE</th>
+                </tr>
+                <tr>
+
+                    <td class="subtraction-difference blue">0</td>
+                    <td class="subtraction-difference yellow">0</td>
+                    <td class="subtraction-difference green">0</td>
+                    <td class="subtraction-difference red">0</td>
+                    <td class="subtraction-difference bluegreen">0</td>
+                    <td class="subtraction-difference pink">0</td>
+
+                </tr>
+            </table>
+        </div>
+<br>
+<div class="centeritem">
+<label><b>FINAL ANSWER</b>
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="answer"></textarea>
+</label>
+</div>
+<br>
+        <br>
+        <div class="centeritem leftside">
+
+            <button class="clear" onclick="clear3()">CLEAR</button>
+        </div>
+    </div>
+
+    <div id="subtractionintermediatetab" class="hide tohide">
+        <div class="centeritem">
+            <img src="polytabcropped.png" alt="Poly Tab"
+                class="polytabimgsmall">
+        </div>
+        <div class="centeritem">
+            <p class="lebel">SUBTRACTION||STUDENT MODE||SELF LEARNING</p>
+        </div>
+        <div class="centeritem rightside">
+            <div class="instructionsfornotfactoring"  style="overflow-y:scroll; overflow-x:hidden;">
+                <h3>INSTRUCTIONS:</h3>
+                <div>
+                    <ol>
+                        <li>	Arrange the polynomial expression in descending order depending on the exponent </li>
+                    <li>	If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient</li>
+                    <li>	Get the coefficients of each term of the polynomial expressions</li>
+
+                    <li>Enter each coefficient in the first row and second row depending on the number of addends/subtrahend.</li>
+                    <li>The sum/difference can be entered at the DIFFERENCE TAB. <span style="color: red;"><b>PRESS ENTER</b></span> to know if your answer is correct.</li>
+                    <li>To find the final answer, get the numbers in the sum/difference tab then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+<div class="centeritem">
+<label>PROBLEM
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="problemtext"></textarea>
+</label>
+</div>
+<br>
+        <div class="centeritem tabss">
+            <table id="table-subtractionintermediate">
+                <tr class="tabletitle">
+                    <th colspan="6">SUBTRACTION OF POLYNOMIALS</th>
+                </tr>
+                <tr>
+                    <td class="subtractionintermediate-row1 blue">0</td>
+                    <td class="subtractionintermediate-row1 yellow">0</td>
+                    <td class="subtractionintermediate-row1 green">0</td>
+                    <td class="subtractionintermediate-row1 red">0</td>
+                    <td class="subtractionintermediate-row1 bluegreen">0</td>
+                    <td class="subtractionintermediate-row1 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtractionintermediate-row2 blue">0</td>
+                    <td class="subtractionintermediate-row2 yellow">0</td>
+                    <td class="subtractionintermediate-row2 green">0</td>
+                    <td class="subtractionintermediate-row2 red">0</td>
+                    <td class="subtractionintermediate-row2 bluegreen">0</td>
+                    <td class="subtractionintermediate-row2 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtractionintermediate-row3 blue">0</td>
+                    <td class="subtractionintermediate-row3 yellow">0</td>
+                    <td class="subtractionintermediate-row3 green">0</td>
+                    <td class="subtractionintermediate-row3 red">0</td>
+                    <td class="subtractionintermediate-row3 bluegreen">0</td>
+                    <td class="subtractionintermediate-row3 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtractionintermediate-row4 blue">0</td>
+                    <td class="subtractionintermediate-row4 yellow">0</td>
+                    <td class="subtractionintermediate-row4 green">0</td>
+                    <td class="subtractionintermediate-row4 red">0</td>
+                    <td class="subtractionintermediate-row4 bluegreen">0</td>
+                    <td class="subtractionintermediate-row4 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtractionintermediate-row5 blue">0</td>
+                    <td class="subtractionintermediate-row5 yellow">0</td>
+                    <td class="subtractionintermediate-row5 green">0</td>
+                    <td class="subtractionintermediate-row5 red">0</td>
+                    <td class="subtractionintermediate-row5 bluegreen">0</td>
+                    <td class="subtractionintermediate-row5 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtractionintermediate-row6 blue">0</td>
+                    <td class="subtractionintermediate-row6 yellow">0</td>
+                    <td class="subtractionintermediate-row6 green">0</td>
+                    <td class="subtractionintermediate-row6 red">0</td>
+                    <td class="subtractionintermediate-row6 bluegreen">0</td>
+                    <td class="subtractionintermediate-row6 pink">0</td>
+
+                </tr>
+
+            </table>
+        </div>
+        <br>
+        <div class="centeritem tabss">
+            <table id="subtractionintermediatedifference">
+                <tr>
+                    <th colspan="6" class="tabletitle">DIFFERENCE</th>
+                </tr>
+                <tr>
+
+                    <td class="subtractionintermediate-difference blue">0</td>
+                    <td class="subtractionintermediate-difference yellow">0</td>
+                    <td class="subtractionintermediate-difference green">0</td>
+                    <td class="subtractionintermediate-difference red">0</td>
+                    <td class="subtractionintermediate-difference bluegreen">0</td>
+                    <td class="subtractionintermediate-difference pink">0</td>
+
+                </tr>
+            </table>
+        </div>
+<br>
+<div class="centeritem">
+<label><b>FINAL ANSWER</b>
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="answer"></textarea>
+</label>
+</div>
+<br>
+        <br>
+        <div class="centeritem leftside">
+            
+            <button class="clear" onclick="clear3()">CLEAR</button>
+        </div>
+    </div>
+
+    <div id="subtractionadvancetab" class="hide tohide">
+        <div class="centeritem">
+            <img src="polytabcropped.png" alt="Poly Tab"
+                class="polytabimgsmall">
+        </div>
+        <div class="centeritem">
+            <p class="lebel">SUBTRACTION||STUDENT MODE||ADVANCE LEVEL</p>
+        </div>
+        <div class="centeritem rightside">
+            <div class="instructionsfornotfactoring" style="overflow-y:scroll; overflow-x:hidden;">
+                <h3>INSTRUCTIONS:</h3>
+                <div>
+                    <ol>
+                        <li>	Arrange the polynomial expression in descending order depending on the exponent </li>
+     <li>	If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient</li>
+                    <li>	Get the coefficients of each term of the polynomial expressions</li>
+               
+                    <li>Enter each coefficient in the first row and second row depending on the number of addends/subtrahend.</li>
+                    <li>The sum/difference can be entered at the lower part of the table</li>
+                    <li>To find the final answer, get the numbers in the sum/difference tab then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+<div class="centeritem">
+<label>PROBLEM
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="problemtext"></textarea>
+</label>
+</div>
+<br>
+        <div class="centeritem tabss">
+            <table id="table-subtractionadvance">
+                <tr class="tabletitle">
+                    <th colspan="6">SUBTRACTION OF POLYNOMIALS</th>
+                </tr>
+                <tr>
+                    <td class="subtractionadvance-row1 blue">0</td>
+                    <td class="subtractionadvance-row1 yellow">0</td>
+                    <td class="subtractionadvance-row1 green">0</td>
+                    <td class="subtractionadvance-row1 red">0</td>
+                    <td class="subtractionadvance-row1 bluegreen">0</td>
+                    <td class="subtractionadvance-row1 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtractionadvance-row2 blue">0</td>
+                    <td class="subtractionadvance-row2 yellow">0</td>
+                    <td class="subtractionadvance-row2 green">0</td>
+                    <td class="subtractionadvance-row2 red">0</td>
+                    <td class="subtractionadvance-row2 bluegreen">0</td>
+                    <td class="subtractionadvance-row2 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtractionadvance-row3 blue">0</td>
+                    <td class="subtractionadvance-row3 yellow">0</td>
+                    <td class="subtractionadvance-row3 green">0</td>
+                    <td class="subtractionadvance-row3 red">0</td>
+                    <td class="subtractionadvance-row3 bluegreen">0</td>
+                    <td class="subtractionadvance-row3 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtractionadvance-row4 blue">0</td>
+                    <td class="subtractionadvance-row4 yellow">0</td>
+                    <td class="subtractionadvance-row4 green">0</td>
+                    <td class="subtractionadvance-row4 red">0</td>
+                    <td class="subtractionadvance-row4 bluegreen">0</td>
+                    <td class="subtractionadvance-row4 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtractionadvance-row5 blue">0</td>
+                    <td class="subtractionadvance-row5 yellow">0</td>
+                    <td class="subtractionadvance-row5 green">0</td>
+                    <td class="subtractionadvance-row5 red">0</td>
+                    <td class="subtractionadvance-row5 bluegreen">0</td>
+                    <td class="subtractionadvance-row5 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtractionadvance-row6 blue">0</td>
+                    <td class="subtractionadvance-row6 yellow">0</td>
+                    <td class="subtractionadvance-row6 green">0</td>
+                    <td class="subtractionadvance-row6 red">0</td>
+                    <td class="subtractionadvance-row6 bluegreen">0</td>
+                    <td class="subtractionadvance-row6 pink">0</td>
+
+                </tr>
+
+            </table>
+        </div>
+        <br>
+        <div class="centeritem tabss">
+            <table id="subtractionadvancedifference">
+                <tr>
+                    <th colspan="6" class="tabletitle">DIFFERENCE</th>
+                </tr>
+                <tr>
+
+                    <td class="subtractionadvance-difference blue">0</td>
+                    <td class="subtractionadvance-difference yellow">0</td>
+                    <td class="subtractionadvance-difference green">0</td>
+                    <td class="subtractionadvance-difference red">0</td>
+                    <td class="subtractionadvance-difference bluegreen">0</td>
+                    <td class="subtractionadvance-difference pink">0</td>
+
+                </tr>
+            </table>
+        </div>
+<br>
+<div class="centeritem">
+<label><b>FINAL ANSWER</b>
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="answer"></textarea>
+</label>
+</div>
+<br>
+        <br>
+        <div class="centeritem leftside">
+
+            <button class="clear" onclick="clear3()">CLEAR</button>
+        </div>
+    </div>
+    
+    <!--Multiplication-->
+    <div id="multiplicationtab" class="hide tohide">
+        <div class="centeritem">
+            <img src="polytabcropped.png" alt="Poly Tab"
+                class="polytabimgsmall">
+        </div>
+        <div class="centeritem">
+            <p id="labeloflearningmodemultiplicationbeginner" class="lebel">MULTIPLICATION||STUDENT MODE||BEGINNER LEVEL</p>
+        </div>
+        <div>
+            <div class="centeritem rightside" id="floatright" >
+                <div class="instructions" id="multiplicationinstructions" style="overflow-y:scroll; overflow-x:hidden;">
+                    <h3>INSTRUCTIONS:</h3>
+                    <div id="instructionformultiplication" class="hide tohide rightside">
+                        <ol>
+                            <li>	Arrange the polynomial expression in descending order depending on the exponent</li>
+                            <li>	If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient</li>
+                            <li>Get the coefficients of each term of the polynomial expressions</li>
+
+                            <li>	Enter each coefficient in the corresponding cells</li>
+                            <li>	The product will show at the bottom part of the multiplication of polynomial table.</li>
+                            <li>To find the final answer, get the numbers in the “Product” tab then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li>
+                            
+                        </ol>
+                    </div>
+                    <div id="instructionfordivision" class="hide tohide">
+                        <ol>
+                            <li>	Arrange the polynomial expression(Dividend and Divisor) in descending order depending on the exponent</li>
+ <li>	If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient</li>
+                            <li>	Get the coefficients of each term of the polynomial expressions</li>
+                           
+                            <li>	Enter each coefficient in the corresponding cells. </li>
+                            <ol>
+                            <li>	enter the divisor on first column on multiplication of polynomial table.</li>
+                            <li>	Enter the dividend on Dividend Tab.</li>
+                            </ol>
+                            <li>	To get the quotient;</li>
+                            <ol>
+                            <li>	get the factor of the first coefficients, one coefficient is given in the divisor(column 1, row 2) the other one will determine by the solver.</li>
+                            <li>	You can use(optional) the “Get Factor’’ tab to help you find the factor of the coefficients.</li>
+                            <li>	The step continues until you use all the coefficients of the dividend</li>
+                            </ol>
+                            <li>	You can use the “Guide” tab to determine the missing number in corresponding diagonal color. The sum of this diagonal color corresponds to the coefficients of the dividend.</li>
+                            <li>	If the Guide tab turns to all zero number it means that you got the correct answer.</li>
+                            <li>	To find the quotient, get the numbers in the first row of the multiplication of polynomial table then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li>
+                        </ol>
+                    </div>
+                    <div id="instructionforfactoring" class="hide tohide">
+                        <ol>
+                            <li>	Arrange the polynomial expression in descending order depending on the exponent.</li>
+<li>	If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient.</li>
+                            <li>	Get the coefficients of each term of the polynomial expressions.</li>
+                            
+                            <li>	Enter each coefficient in the "Dividend" column.</li>
+                            <li>	Set the highest degree of exponent based on the problem given. </li>
+                            <li>	To get the factor of the polynomial;</li>
+                            <ol>
+                            <li>	get the factor of the last coefficients.</li>
+                            <li>You can use the “Get Factor" tab to help you find the factor of the coefficients.</li>
+                            <li>	Use each number of the factors obtained in Get factor tab, kindly enter each number “x = “ tab, click “check”. Once you obtained a “0” value in the checker, it means that number is one of the factor of a given polynomial expression.</li>
+                            </ol>
+                            <li>	After you determine one factor of the polynomial, you can use the “multiplication of polynomial table” to find the other factor. Kindly enter in the first column the corresponding coefficients(don't forget to equate it to 0) of one factor(i.e. “x - 3 = 0” , use 1 and -3 as the coefficients).</li>
+                            <li>	Use the last coefficients as the starting point, look for the other factor in the “Get factor tab” that is paired in the corresponding number in the divisor(other factor). </li>
+                            <li>	Continue until your fill all the boxes in the multiplication of polynomial table.</li>
+                            <li>	If the Guide tab turns to all zero number it means that you got the correct answer.</li>
+                            <li>	To find the factors, get the numbers in the first row and first column of the multiplication of polynomial table then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li>
+                            
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+            <div> <!--Factors of any number-->
+                <div class="centeritem">
+                    <div class="hide tohide" id="factorslistfinder">
+                        <div class="centeritem">
+                            <label for="factors" class="center">Factors of </div><div class="centeritem"><input type="number" id="factors"
+                                    class="data"></label>
+                        </div>
+                        <br>
+                        <div class="centeritem">
+                            <button id="getfactor" onclick="getfactor()">Get Factor</button>
+                        </div>
+                        <div class="centeritem">
+                            <p id="factorpairs" style="width: 50%; text-align: center;"></p>
+                        </div>
+                        <div class="hide" id="exponenttab">
+                            <div class="centeritem">
+                                <label for="exponent">Highest Degree of Exponent</div>
+<div class="centeritem">
+                                    <br><select name="exponent" id="exponent">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+
+                                    </select></label>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="centeritem">
+                                <label for="tofind">X = </div><div class="centeritem"><input type="number" id="tofind" class="data"></label>
+                            </div>
+                            <br>
+                            <div class="centeritem leftside">
+                                <button onclick="checker()">CHECK</button>
+                            </div>
+                            <br>
+                            <div class="centeritem">
+                                <p><span>Checker: </span><span id="checker"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+<div class="centeritem">
+<label>PROBLEM
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="problemtext"></textarea>
+</label>
+</div>
+<br>
+        <div class="centeritem tabss">
+            <table id="table-multiplication">
+                <TR>
+                    <TH colspan="6" class="tabletitle" id="labelofmultiply">MULTIPLICATION OF POLYNOMIALS</TH>
+                </TR>
+                <tr>
+                    <th>X</th>
+                    <td class="multiplication-top">0</td>
+                    <td class="multiplication-top">0</td>
+                    <td class="multiplication-top">0</td>
+                    <td class="multiplication-top">0</td>
+                    <td class="multiplication-top">0</td>
+
+
+                </tr>
+                <tr>
+                    <td class="multiplication-side">0</td>
+                    <td class="multiplication-row1 multiplication-column1 blue">0</td>
+                    <td class="multiplication-row1 multiplication-column2 red">0</td>
+                    <td class="multiplication-row1 multiplication-column3 green">0</td>
+                    <td class="multiplication-row1 multiplication-column4 yellow">0</td>
+                    <td class="multiplication-row1 multiplication-column5 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="multiplication-side">0</td>
+                    <td class="multiplication-row2 multiplication-column1 red">0</td>
+                    <td class="multiplication-row2 multiplication-column2 green">0</td>
+                    <td class="multiplication-row2 multiplication-column3 yellow">0</td>
+                    <td class="multiplication-row2 multiplication-column4 pink">0</td>
+                    <td class="multiplication-row2 multiplication-column5 bluegreen">0</td>
+
+
+                </tr>
+                <tr>
+                    <td class="multiplication-side">0</td>
+                    <td class="multiplication-row3 multiplication-column1 green">0</td>
+                    <td class="multiplication-row3 multiplication-column2 yellow">0</td>
+                    <td class="multiplication-row3 multiplication-column3 pink">0</td>
+                    <td class="multiplication-row3 multiplication-column4 bluegreen">0</td>
+                    <td class="multiplication-row3 multiplication-column5 violet">0</td>
+
+
+                </tr>
+                <tr>
+                    <td class="multiplication-side">0</td>
+                    <td class="multiplication-row4 multiplication-column1 yellow">0</td>
+                    <td class="multiplication-row4 multiplication-column2 pink">0</td>
+                    <td class="multiplication-row4 multiplication-column3 bluegreen">0</td>
+                    <td class="multiplication-row4 multiplication-column4 violet">0</td>
+                    <td class="multiplication-row4 multiplication-column5 orange">0</td>
+
+
+                </tr>
+                <tr>
+                    <td class="multiplication-side">0</td>
+                    <td class="multiplication-row5 multiplication-column1 pink">0</td>
+                    <td class="multiplication-row5 multiplication-column2 bluegreen">0</td>
+                    <td class="multiplication-row5 multiplication-column3 violet">0</td>
+                    <td class="multiplication-row5 multiplication-column4 orange">0</td>
+                    <td class="multiplication-row5 multiplication-column5 yellowgreen">0</td>
+
+
+                </tr>
+
+            </table>
+        </div>
+        <br>
+        <div class="centeritem tabss">
+            <table id="multiplicationproduct">
+
+                <tr>
+                    <th class="tabletitle">PRODUCT</th>
+
+                    <td class="multiplication-product blue">0</td>
+                    <td class="multiplication-product red">0</td>
+                    <td class="multiplication-product green">0</td>
+                    <td class="multiplication-product yellow">0</td>
+                    <td class="multiplication-product pink">0</td>
+                    <td class="multiplication-product bluegreen">0</td>
+                    <td class="multiplication-product violet">0</td>
+                    <td class="multiplication-product orange">0</td>
+                    <td class="multiplication-product yellowgreen">0</td>
+
+
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div class="centeritem tabss">
+            <div id="forfact" class="hide">
+                <table class="hide tohide" id='problemandguide'>
+
+                    <tr id="problemlist">
+                        <th class="tabletitle">DIVIDEND</th>
+                        <td class="problem blue">0</td>
+                        <td class="problem red">0</td>
+                        <td class="problem green">0</td>
+                        <td class="problem yellow">0</td>
+                        <td class="problem pink">0</td>
+                        <td class="problem bluegreen">0</td>
+                        <td class="problem violet">0</td>
+                        <td class="problem orange">0</td>
+                        <td class="problem yellowgreen">0</td>
+
+                    </tr>
+
+                    <tr id="guidelist">
+                        <th class="tabletitle">GUIDE</th>
+                        <td class="guide">0</td>
+                        <td class="guide">0</td>
+                        <td class="guide">0</td>
+                        <td class="guide">0</td>
+                        <td class="guide">0</td>
+                        <td class="guide">0</td>
+                        <td class="guide">0</td>
+                        <td class="guide">0</td>
+                        <td class="guide">0</td>
+
+
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+<br>
+<div class="centeritem">
+<label><b>FINAL ANSWER</b>
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="answer"></textarea>
+</label>
+</div>
+<br>
+        <br>
+        <div class="centeritem">
+            <br>
+
+            <button class="clear" onclick="clear3()">CLEAR</button>
+        </div>
+    </div>
+
+    <div id="multiplicationintermediatetab" class="hide tohide">
+        <div class="centeritem">
+            <img src="polytabcropped.png" alt="Poly Tab"
+                class="polytabimgsmall">
+        </div>
+        <div class="centeritem">
+            <p id="labeloflearningmodemultiplicationintermediate" class="lebel">MULTIPLICATION||STUDENT MODE||SELF-LEARNING</p>
+        </div>
+        <div>
+            <div class="centeritem rightside" id="floatright">
+                <div class="instructions" id="multiplicationintermediateinstructions" style="overflow-y:scroll; overflow-x:hidden;">
+                    <h3>INSTRUCTIONS:</h3>
+                    <div id="instructionformultiplicationintermediate" class="hide tohide rightside">
+                        <ol>
+                            <li>	Arrange the polynomial expression in descending order depending on the exponent</li>
+ <li>	If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient</li>
+                            <li>Get the coefficients of each term of the polynomial expressions</li>
+                           
+                            <li>	Enter each coefficient in the corresponding cells</li>
+                            <li>	The product will can be entered in the PRODUCT TAB and <span style="color: red;"><b>PRESS ENTER</b></span> to know if your answer is correct or wrong.</li>
+                            <li>To find the final answer, get the numbers in the “Product” tab then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li>
+                            
+                            
+                        </ol>
+                    </div>
+                    <div id="instructionfordivisionintermediate" class="hide tohide">
+                        <ol>
+                            
+
+<li>	Arrange the polynomial expression(Dividend and Divisor) in descending order depending on the exponent</li>
+<li>	If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient</li>
+<li>	Get the coefficients of each term of the polynomial expressions</li>
+
+<li>	Enter each coefficient in the corresponding cells. </li>
+<ol>
+<li>	enter the divisor on first column on multiplication of polynomial table.</li>
+<li>	Enter the dividend on Dividend Tab.</li>
+</ol>
+<li>	To get the quotient;</li>
+<ol>
+<li>	get the factor of the first coefficients, one coefficient is given in the divisor(column 1, row 2) the other one will determine by the solver.</li>
+<li>	You can use(optional) the “Get "Factor" tab to help you find the factor of the coefficients.</li>
+<li>	The step continues until you use all the coefficients of the dividend</li>
+</ol>
+<li>	You can use the “Guide” tab to determine the missing number in corresponding diagonal color. The sum of this diagonal color corresponds to the coefficients of the dividend.</li>
+<li>	If the Guide tab turns to all zero number it means that you got the correct answer. However, if all cells in guide tab turns to zeri except the last one it means that is the remainder</li>
+<li>You can click enter in each cell to know if your answer is correct</li>
+
+<li>	To find the quotient, get the numbers in the first row of the multiplication of polynomial table then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li>
+                        </ol>
+                    </div>
+                    <div id="instructionforfactoringintermediate" class="hide tohide">
+                        <ol>
+                            
+<li>	Arrange the polynomial expression in descending order depending on the exponent.</li>
+<li>	If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient.</li>
+<li>	Get the coefficients of each term of the polynomial expressions.</li>
+
+<li>	Enter each coefficient in the "Dividend" column.</li>
+<li>	Set the highest degree of exponent based on the problem given. </li>
+<li>	To get the factor of the polynomial;</li>
+<ol>
+<li>	get the factor of the last coefficients.</li>
+<li>You can use the “Get Factor" tab to help you find the factor of the coefficients.</li>
+<li>	Use each number of the factors obtained in Get factor tab, kindly enter each number “x = “ tab, click “check”. Once you obtained a “0” value in the checker, it means that number is one of the factor of a given polynomial expression.</li>
+</ol>
+<li>	After you determine one factor of the polynomial, you can use the “multiplication of polynomial table” to find the other factor. Kindly enter in the first column the corresponding coefficients(don't forget to equate it to 0) of one factor(i.e. “x - 3 = 0” , use 1 and -3 as the coefficients).</li>
+<li>	Use the last coefficients as the starting point, look for the other factor in the “Get factor tab” that is paired in the corresponding number in the divisor(other factor). </li>
+<li>	Continue until your fill all the boxes in the multiplication of polynomial table.</li>
+<li>	If the Guide tab turns to all zero number it means that you got the correct answer.</li>
+<li>You can click show answer to see the correct answer</li>
+<li>	To find the factors, get the numbers in the first row and first column of the multiplication of polynomial table then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+            <div>
+
+                <!--Factors of any number-->
+                <div class="centeritem">
+                    <div class="hide tohide" id="factorsintermediatelistfinder">
+                        <div class="centeritem">
+                            <label for="factorsintermediate" class="center">Factors of</div> <div class="centeritem"><input type="number"
+                                    id="factorsintermediate" class="data"></label>
+                        </div>
+                        <br>
+                        <div class="centeritem">
+                            <button id="getfactorintermediate" onclick="getfactorintermediate()">Get Factor</button>
+                        </div>
+                        <div class="centeritem">
+                            <p id="factorintermediatepairs" style="width: 50%; text-align: center;"></p>
+                        </div>
+                        <div class="hide" id="exponenttabintermediate">
+                            <div class="centeritem">
+                                <label for="exponentintermediate">Highest Degree of Exponent</div>
+<div class="centeritem">
+                                    <br><select name="exponentintermediate" id="exponentintermediate">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+
+                                    </select></label>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="centeritem">
+                                <label for="tofindintermediate">X =</div><div class="centeritem"> <input type="number" id="tofindintermediate"
+                                        class="data"></label>
+                            </div>
+                            <br>
+                            <div class="centeritem leftside">
+                                <button onclick="checkerintermediate()">CHECK</button>
+                            </div>
+                            <br>
+                            <div class="centeritem">
+                                <p><span>Checker: </span><span id="checkerintermediate">____</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+<div class="centeritem">
+<label>PROBLEM
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="problemtext"></textarea>
+</label>
+</div>
+<br>
+        <div class="centeritem tabss">
+            <table id="table-multiplicationintermediate">
+                <TR>
+                    <TH colspan="6" class="tabletitle" id="labelofmultiplyintermediate">MULTIPLICATION OF POLYNOMIALS
+                    </TH>
+                </TR>
+                <tr>
+                    <th>X</th>
+                    <td class="multiplicationintermediate-top">0</td>
+                    <td class="multiplicationintermediate-top">0</td>
+                    <td class="multiplicationintermediate-top">0</td>
+                    <td class="multiplicationintermediate-top">0</td>
+                    <td class="multiplicationintermediate-top">0</td>
+
+
+                </tr>
+                <tr>
+                    <td class="multiplicationintermediate-side">0</td>
+                    <td class="multiplicationintermediate-row1 multiplicationintermediate-column1 blue">0</td>
+                    <td class="multiplicationintermediate-row1 multiplicationintermediate-column2 red">0</td>
+                    <td class="multiplicationintermediate-row1 multiplicationintermediate-column3 green">0</td>
+                    <td class="multiplicationintermediate-row1 multiplicationintermediate-column4 yellow">0</td>
+                    <td class="multiplicationintermediate-row1 multiplicationintermediate-column5 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="multiplicationintermediate-side">0</td>
+                    <td class="multiplicationintermediate-row2 multiplicationintermediate-column1 red">0</td>
+                    <td class="multiplicationintermediate-row2 multiplicationintermediate-column2 green">0</td>
+                    <td class="multiplicationintermediate-row2 multiplicationintermediate-column3 yellow">0</td>
+                    <td class="multiplicationintermediate-row2 multiplicationintermediate-column4 pink">0</td>
+                    <td class="multiplicationintermediate-row2 multiplicationintermediate-column5 bluegreen">0</td>
+
+
+                </tr>
+                <tr>
+                    <td class="multiplicationintermediate-side">0</td>
+                    <td class="multiplicationintermediate-row3 multiplicationintermediate-column1 green">0</td>
+                    <td class="multiplicationintermediate-row3 multiplicationintermediate-column2 yellow">0</td>
+                    <td class="multiplicationintermediate-row3 multiplicationintermediate-column3 pink">0</td>
+                    <td class="multiplicationintermediate-row3 multiplicationintermediate-column4 bluegreen">0</td>
+                    <td class="multiplicationintermediate-row3 multiplicationintermediate-column5 violet">0</td>
+
+
+                </tr>
+                <tr>
+                    <td class="multiplicationintermediate-side">0</td>
+                    <td class="multiplicationintermediate-row4 multiplicationintermediate-column1 yellow">0</td>
+                    <td class="multiplicationintermediate-row4 multiplicationintermediate-column2 pink">0</td>
+                    <td class="multiplicationintermediate-row4 multiplicationintermediate-column3 bluegreen">0</td>
+                    <td class="multiplicationintermediate-row4 multiplicationintermediate-column4 violet">0</td>
+                    <td class="multiplicationintermediate-row4 multiplicationintermediate-column5 orange">0</td>
+
+
+                </tr>
+                <tr>
+                    <td class="multiplicationintermediate-side">0</td>
+                    <td class="multiplicationintermediate-row5 multiplicationintermediate-column1 pink">0</td>
+                    <td class="multiplicationintermediate-row5 multiplicationintermediate-column2 bluegreen">0</td>
+                    <td class="multiplicationintermediate-row5 multiplicationintermediate-column3 violet">0</td>
+                    <td class="multiplicationintermediate-row5 multiplicationintermediate-column4 orange">0</td>
+                    <td class="multiplicationintermediate-row5 multiplicationintermediate-column5 yellowgreen">0</td>
+
+
+                </tr>
+
+            </table>
+        </div>
+        <br>
+        <div class="centeritem tabss">
+            <table id="multiplicationintermediateproduct">
+
+                <tr>
+                    <th class="tabletitle">PRODUCT</th>
+
+                    <td class="multiplicationintermediate-product blue">0</td>
+                    <td class="multiplicationintermediate-product red">0</td>
+                    <td class="multiplicationintermediate-product green">0</td>
+                    <td class="multiplicationintermediate-product yellow">0</td>
+                    <td class="multiplicationintermediate-product pink">0</td>
+                    <td class="multiplicationintermediate-product bluegreen">0</td>
+                    <td class="multiplicationintermediate-product violet">0</td>
+                    <td class="multiplicationintermediate-product orange">0</td>
+                    <td class="multiplicationintermediate-product yellowgreen">0</td>
+
+
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div class="centeritem tabss">
+            <div id="forfactintermediate" class="hide">
+                <table class="hide tohide" id='problemintermediateandguideintermediate'>
+
+                    <tr id="problemintermediatelist">
+                        <th class="tabletitle">DIVIDEND</th>
+                        <td class="problemintermediate blue">0</td>
+                        <td class="problemintermediate red">0</td>
+                        <td class="problemintermediate green">0</td>
+                        <td class="problemintermediate yellow">0</td>
+                        <td class="problemintermediate pink">0</td>
+                        <td class="problemintermediate bluegreen">0</td>
+                        <td class="problemintermediate violet">0</td>
+                        <td class="problemintermediate orange">0</td>
+                        <td class="problemintermediate yellowgreen">0</td>
+
+                    </tr>
+
+                    <tr id="guideintermediatelist">
+                        <th class="tabletitle">GUIDE</th>
+                        <td class="guideintermediate">0</td>
+                        <td class="guideintermediate">0</td>
+                        <td class="guideintermediate">0</td>
+                        <td class="guideintermediate">0</td>
+                        <td class="guideintermediate">0</td>
+                        <td class="guideintermediate">0</td>
+                        <td class="guideintermediate">0</td>
+                        <td class="guideintermediate">0</td>
+                        <td class="guideintermediate">0</td>
+
+
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+<br>
+<div class="centeritem">
+<label><b>FINAL ANSWER</b>
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="answer"></textarea>
+</label>
+</div>
+<br>
+        <br>
+        <div class="centeritem">
+            <br>
+        
+            <button class="clear" onclick="clear3()">CLEAR</button>
+        </div>
+    </div>
+
+    <div id="multiplicationadvancetab" class="hide tohide">
+        <div class="centeritem">
+            <img src="polytabcropped.png" alt="Poly Tab"
+                class="polytabimgsmall">
+        </div>
+        <div class="centeritem">
+            <p id="labeloflearningmodemultiplicationadvance" class="lebel">MULTIPLICATION||STUDENT MODE||ADVANCE LEVEL</p>
+        </div>
+        <div>
+            <div class="centeritem rightside" id="floatright" >
+                <div class="instructions" id="multiplicationadvanceinstructions" style="overflow-y:scroll; overflow-x:hidden;">
+                    <h3>INSTRUCTIONS:</h3>
+                    <div id="instructionformultiplicationadvance" class="hide tohide rightside">
+                        <ol>
+                            <li>	Arrange the polynomial expression in descending order depending on the exponent</li>
+<li>	If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient</li>
+<li>Get the coefficients of each term of the polynomial expressions</li>
+
+<li>	Enter each coefficient in the corresponding cells</li>
+<li>	The product will show at the bottom part of the multiplication of polynomial table.</li>
+<li>To find the final answer, get the numbers in the “Product” tab then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li>
+
+
+                        </ol>
+                    </div>
+                    <div id="instructionfordivisionadvance" class="hide tohide">
+                        <ol>
+                           
+
+<li>	Arrange the polynomial expression(Dividend and Divisor) in descending order depending on the exponent</li>
+<li>	If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient</li>
+<li>	Get the coefficients of each term of the polynomial expressions</li>
+
+<li>	Enter each coefficient in the corresponding cells. </li>
+<ol>
+<li>	enter the divisor on first column on multiplication of polynomial table.</li>
+<li>	Enter the dividend on Dividend Tab.</li>
+</ol>
+<li>	To get the quotient;</li>
+<ol>
+<li>	get the factor of the first coefficients, one coefficient is given in the divisor(column 1, row 2) the other one will determine by the solver.</li>
+<li>	You can use(optional) the “Get Factor’’ tab to help you find the factor of the coefficients.</li>
+<li>	The step continues until you use all the coefficients of the dividend</li>
+</ol>
+<li>	You can use the “Guide” tab to determine the missing number in corresponding diagonal color. The sum of this diagonal color corresponds to the coefficients of the dividend.</li>
+<li>	If the Guide tab turns to all zero number it means that you got the correct answer.</li>
+<li>	To find the quotient, get the numbers in the first row of the multiplication of polynomial table then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li>
+
+                        </ol>
+                    </div>
+                    <div id="instructionforfactoringadvance" class="hide tohide">
+                        <ol>
+                            
+<li>	Arrange the polynomial expression in descending order depending on the exponent.</li>
+<li>	If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient.</li>
+<li>	Get the coefficients of each term of the polynomial expressions.</li>
+
+<li>	Enter each coefficient in the "Dividend" column.</li>
+<li>	Set the highest degree of exponent based on the problem given. </li>
+<li>	To get the factor of the polynomial;</li>
+<ol>
+<li>	get the factor of the last coefficients.</li>
+<li>You can use the “Get Factor" tab to help you find the factor of the coefficients.</li>
+<li>	Use each number of the factors obtained in Get factor tab, kindly enter each number “x = “ tab, click “check”. Once you obtained a “0” value in the checker, it means that number is one of the factor of a given polynomial expression.</li>
+</ol>
+<li>	After you determine one factor of the polynomial, you can use the “multiplication of polynomial table” to find the other factor. Kindly enter in the first column the corresponding coefficients(don't forget to equate it to 0) of one factor(i.e. “x - 3 = 0” , use 1 and -3 as the coefficients).</li>
+<li>	Use the last coefficients as the starting point, look for the other factor in the “Get factor tab” that is paired in the corresponding number in the divisor(other factor). </li>
+<li>	Continue until your fill all the boxes in the multiplication of polynomial table.</li>
+<li>	If the Guide tab turns to all zero number it means that you got the correct answer.</li>
+<li>	To find the factors, get the numbers in the first row and first column of the multiplication of polynomial table then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+            <div>
+
+                <!--Factors of any number-->
+                <div class="centeritem">
+                    <div class="hide tohide" id="factorsadvancelistfinder">
+                        <div class="centeritem">
+                            <label for="factorsadvance" class="center">Factors of </div><div class="centeritem"> <input type="number"
+                                    id="factorsadvance" class="data"></label>
+                        </div>
+                        <br>
+                        <div class="centeritem">
+                            <button id="getfactoradvance" onclick="getfactoradvance()">Get Factor</button>
+                        </div>
+                        <div class="centeritem">
+                            <p id="factoradvancepairs" style="width: 50%; text-align: center;"></p>
+                        </div>
+                        <div class="hide" id="exponenttabadvance">
+                            <div class="centeritem">
+                                <label for="exponentadvance">Highest Degree of Exponent </div><div class="centeritem">
+                                    <br><select name="exponentadvance" id="exponentadvance">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+
+                                    </select></label>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="centeritem">
+                                <label for="tofindadvance">X = </div><div class="centeritem"><input type="number" id="tofindadvance"
+                                        class="data"></label>
+                            </div>
+                            <br>
+                            <div class="centeritem leftside">
+                                <button onclick="checkeradvance()">CHECK</button>
+                            </div>
+                            <br>
+                            <div class="centeritem">
+                                <p><span>Checker: </span><span id="checkeradvance"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+<div class="centeritem">
+<label>PROBLEM
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="problemtext"></textarea>
+</label>
+</div>
+<br>
+        <div class="centeritem tabss">
+            <table id="table-multiplicationadvance">
+                <TR>
+                    <TH colspan="6" class="tabletitle" id="labelofmultiplyadvance">MULTIPLICATION OF POLYNOMIALS</TH>
+                </TR>
+                <tr>
+                    <th>X</th>
+                    <td class="multiplicationadvance-top">0</td>
+                    <td class="multiplicationadvance-top">0</td>
+                    <td class="multiplicationadvance-top">0</td>
+                    <td class="multiplicationadvance-top">0</td>
+                    <td class="multiplicationadvance-top">0</td>
+
+
+                </tr>
+                <tr>
+                    <td class="multiplicationadvance-side">0</td>
+                    <td class="multiplicationadvance-row1 multiplicationadvance-column1 blue">0</td>
+                    <td class="multiplicationadvance-row1 multiplicationadvance-column2 red">0</td>
+                    <td class="multiplicationadvance-row1 multiplicationadvance-column3 green">0</td>
+                    <td class="multiplicationadvance-row1 multiplicationadvance-column4 yellow">0</td>
+                    <td class="multiplicationadvance-row1 multiplicationadvance-column5 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="multiplicationadvance-side">0</td>
+                    <td class="multiplicationadvance-row2 multiplicationadvance-column1 red">0</td>
+                    <td class="multiplicationadvance-row2 multiplicationadvance-column2 green">0</td>
+                    <td class="multiplicationadvance-row2 multiplicationadvance-column3 yellow">0</td>
+                    <td class="multiplicationadvance-row2 multiplicationadvance-column4 pink">0</td>
+                    <td class="multiplicationadvance-row2 multiplicationadvance-column5 bluegreen">0</td>
+
+
+                </tr>
+                <tr>
+                    <td class="multiplicationadvance-side">0</td>
+                    <td class="multiplicationadvance-row3 multiplicationadvance-column1 green">0</td>
+                    <td class="multiplicationadvance-row3 multiplicationadvance-column2 yellow">0</td>
+                    <td class="multiplicationadvance-row3 multiplicationadvance-column3 pink">0</td>
+                    <td class="multiplicationadvance-row3 multiplicationadvance-column4 bluegreen">0</td>
+                    <td class="multiplicationadvance-row3 multiplicationadvance-column5 violet">0</td>
+
+
+                </tr>
+                <tr>
+                    <td class="multiplicationadvance-side">0</td>
+                    <td class="multiplicationadvance-row4 multiplicationadvance-column1 yellow">0</td>
+                    <td class="multiplicationadvance-row4 multiplicationadvance-column2 pink">0</td>
+                    <td class="multiplicationadvance-row4 multiplicationadvance-column3 bluegreen">0</td>
+                    <td class="multiplicationadvance-row4 multiplicationadvance-column4 violet">0</td>
+                    <td class="multiplicationadvance-row4 multiplicationadvance-column5 orange">0</td>
+
+
+                </tr>
+                <tr>
+                    <td class="multiplicationadvance-side">0</td>
+                    <td class="multiplicationadvance-row5 multiplicationadvance-column1 pink">0</td>
+                    <td class="multiplicationadvance-row5 multiplicationadvance-column2 bluegreen">0</td>
+                    <td class="multiplicationadvance-row5 multiplicationadvance-column3 violet">0</td>
+                    <td class="multiplicationadvance-row5 multiplicationadvance-column4 orange">0</td>
+                    <td class="multiplicationadvance-row5 multiplicationadvance-column5 yellowgreen">0</td>
+
+
+                </tr>
+
+            </table>
+        </div>
+        <br>
+        <div class="centeritem tabss">
+            <table id="multiplicationadvanceproduct">
+
+                <tr>
+                    <th class="tabletitle">PRODUCT</th>
+
+                    <td class="multiplicationadvance-product blue">0</td>
+                    <td class="multiplicationadvance-product red">0</td>
+                    <td class="multiplicationadvance-product green">0</td>
+                    <td class="multiplicationadvance-product yellow">0</td>
+                    <td class="multiplicationadvance-product pink">0</td>
+                    <td class="multiplicationadvance-product bluegreen">0</td>
+                    <td class="multiplicationadvance-product violet">0</td>
+                    <td class="multiplicationadvance-product orange">0</td>
+                    <td class="multiplicationadvance-product yellowgreen">0</td>
+
+
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div class="centeritem tabss">
+            <div id="forfactadvance" class="hide">
+                <table class="hide tohide" id='problemadvanceandguideadvance'>
+
+                    <tr id="problemadvancelist">
+                        <th class="tabletitle">PROBLEM</th>
+                        <td class="problemadvance blue">0</td>
+                        <td class="problemadvance red">0</td>
+                        <td class="problemadvance green">0</td>
+                        <td class="problemadvance yellow">0</td>
+                        <td class="problemadvance pink">0</td>
+                        <td class="problemadvance bluegreen">0</td>
+                        <td class="problemadvance violet">0</td>
+                        <td class="problemadvance orange">0</td>
+                        <td class="problemadvance yellowgreen">0</td>
+
+                    </tr>
+
+                    <tr id="guideadvancelist">
+                        <th class="tabletitle">GUIDE</th>
+                        <td class="guideadvance">0</td>
+                        <td class="guideadvance">0</td>
+                        <td class="guideadvance">0</td>
+                        <td class="guideadvance">0</td>
+                        <td class="guideadvance">0</td>
+                        <td class="guideadvance">0</td>
+                        <td class="guideadvance">0</td>
+                        <td class="guideadvance">0</td>
+                        <td class="guideadvance">0</td>
+
+
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+<br>
+<div class="centeritem">
+<label><b>FINAL ANSWER</b>
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="answer"></textarea>
+</label>
+</div>
+<br>
+        <br>
+        <div class="centeritem">
+            <br>
+
+            <button class="clear" onclick="clear3()">CLEAR</button>
+        </div>
+    </div>
+    <!--additiongame-->
+    <div id="additiongametab" class="hide tohide">
+
+        <div class="centeritem">
+            <img src="polytabcropped.png" alt="Poly Tab"
+                class="polytabimgsmall">
+        </div>
+        <div class="centeritem">
+            <p class="lebel">ADDITION||TEACHING MODE</p>
+        </div>
+        <div class="centeritem">
+            <div class="instructionsfornotfactoring"  style="overflow-y:scroll; overflow-x:hidden;">
+                <h3>INSTRUCTIONS:</h3>
+                <div>
+                    <ol>
+                        <li>	Arrange the polynomial expression in descending order depending on the exponent </li>
+<li>	If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient</li>
+                        <li>	Get the coefficients of each term of the polynomial expressions</li>
+                        
+                        <li>Enter each coefficient in the first row and second row depending on the number of addends/subtrahend.</li>
+                        <li>The Sum/Difference can be entered at the SUM/DIFFERENCE tab. You can <span style="color: red;"><b>PRESS ENTER</b></span> to know if the answer is correct</li>
+                        <li>To find the final answer, get the numbers in the sum/difference tab then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+<div class="centeritem">
+<label>PROBLEM
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="problemtext"></textarea>
+</label>
+</div>
+<br>
+        <div class="centeritem tabss">
+            <table id="table-additiongame">
+                <tr>
+                    <th colspan="8">ADDITION OF POLYNOMIALS</th>
+                </tr>
+                <tr>
+                    <td class="additiongame-row1 blue">0</td>
+                    <td class="additiongame-row1 red">0</td>
+                    <td class="additiongame-row1 green">0</td>
+                    <td class="additiongame-row1 yellow">0</td>
+                    <td class="additiongame-row1 pink">0</td>
+                    <td class="additiongame-row1 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="additiongame-row2 blue">0</td>
+                    <td class="additiongame-row2 red">0</td>
+                    <td class="additiongame-row2 green">0</td>
+                    <td class="additiongame-row2 yellow">0</td>
+                    <td class="additiongame-row2 pink">0</td>
+                    <td class="additiongame-row2 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="additiongame-row3 blue">0</td>
+                    <td class="additiongame-row3 red">0</td>
+                    <td class="additiongame-row3 green">0</td>
+                    <td class="additiongame-row3 yellow">0</td>
+                    <td class="additiongame-row3 pink">0</td>
+                    <td class="additiongame-row3 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="additiongame-row4 blue">0</td>
+                    <td class="additiongame-row4 red">0</td>
+                    <td class="additiongame-row4 green">0</td>
+                    <td class="additiongame-row4 yellow">0</td>
+                    <td class="additiongame-row4 pink">0</td>
+                    <td class="additiongame-row4 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="additiongame-row5 blue">0</td>
+                    <td class="additiongame-row5 red">0</td>
+                    <td class="additiongame-row5 green">0</td>
+                    <td class="additiongame-row5 yellow">0</td>
+                    <td class="additiongame-row5 pink">0</td>
+                    <td class="additiongame-row5 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="additiongame-row6 blue">0</td>
+                    <td class="additiongame-row6 red">0</td>
+                    <td class="additiongame-row6 green">0</td>
+                    <td class="additiongame-row6 yellow">0</td>
+                    <td class="additiongame-row6 pink">0</td>
+                    <td class="additiongame-row6 bluegreen">0</td>
+
+                </tr>
+
+            </table>
+        </div>
+        <br>
+
+        <div class="centeritem tabss">
+            <table id="additiongamesum">
+                <tr>
+                    <th>SUM</th>
+                    <td class="additiongame-sum blue">0</td>
+                    <td class="additiongame-sum red">0</td>
+                    <td class="additiongame-sum green">0</td>
+                    <td class="additiongame-sum yellow">0</td>
+                    <td class="additiongame-sum pink">0</td>
+                    <td class="additiongame-sum bluegreen">0</td>
+
+                </tr>
+            </table>
+        </div>
+<br>
+<div class="centeritem">
+<label><b>FINAL ANSWER</b>
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="answer"></textarea>
+</label>
+</div>
+<br>
+        <br>
+        <div class="centeritem">
+
+            <button class="clear" onclick="clear3()">CLEAR</button>
+        </div>
+    </div>
+    <!--subtractiongame-->
+    <div id="subtractiongametab" class="hide tohide">
+        <div class="centeritem">
+            <img src="polytabcropped.png" alt="Poly Tab"
+                class="polytabimgsmall">
+        </div>
+        <div class="centeritem">
+            <p class="lebel">SUBTRACTION||TEACHING MODE</p>
+        </div>
+        <div class="centeritem">
+            <div class="instructionsfornotfactoring"  style="overflow-y:scroll; overflow-x:hidden;">
+                <h3>INSTRUCTIONS:</h3>
+                <div>
+                    <ol>
+                        <li>	Arrange the polynomial expression in descending order depending on the exponent </li>
+<li>	If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient</li>
+                        <li>	Get the coefficients of each term of the polynomial expressions</li>
+                        
+                        <li>Enter each coefficient in the first row and second row depending on the number of addends/subtrahend.</li>
+                        <li>The Sum/Difference can be entered at the SUM/DIFFERENCE tab. You can <span style="color: red;"><b>PRESS ENTER</b></span> to know if the answer is correct</li>
+                        
+                        <li>To find the final answer, get the numbers in the sum/difference tab then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+<div class="centeritem">
+<label>PROBLEM
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="problemtext"></textarea>
+</label>
+</div>
+<br>
+        <div class="centeritem tabss">
+            <table id="table-subtractiongame">
+                <tr>
+                    <th colspan="8">SUBTRACTION OF POLYNOMIALS</th>
+                </tr>
+                <tr>
+                    <td class="subtractiongame-row1 blue">0</td>
+                    <td class="subtractiongame-row1 red">0</td>
+                    <td class="subtractiongame-row1 green">0</td>
+                    <td class="subtractiongame-row1 yellow">0</td>
+                    <td class="subtractiongame-row1 pink">0</td>
+                    <td class="subtractiongame-row1 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtractiongame-row2 blue">0</td>
+                    <td class="subtractiongame-row2 red">0</td>
+                    <td class="subtractiongame-row2 green">0</td>
+                    <td class="subtractiongame-row2 yellow">0</td>
+                    <td class="subtractiongame-row2 pink">0</td>
+                    <td class="subtractiongame-row2 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtractiongame-row3 blue">0</td>
+                    <td class="subtractiongame-row3 red">0</td>
+                    <td class="subtractiongame-row3 green">0</td>
+                    <td class="subtractiongame-row3 yellow">0</td>
+                    <td class="subtractiongame-row3 pink">0</td>
+                    <td class="subtractiongame-row3 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtractiongame-row4 blue">0</td>
+                    <td class="subtractiongame-row4 red">0</td>
+                    <td class="subtractiongame-row4 green">0</td>
+                    <td class="subtractiongame-row4 yellow">0</td>
+                    <td class="subtractiongame-row4 pink">0</td>
+                    <td class="subtractiongame-row4 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtractiongame-row5 blue">0</td>
+                    <td class="subtractiongame-row5 red">0</td>
+                    <td class="subtractiongame-row5 green">0</td>
+                    <td class="subtractiongame-row5 yellow">0</td>
+                    <td class="subtractiongame-row5 pink">0</td>
+                    <td class="subtractiongame-row5 bluegreen">0</td>
+
+                </tr>
+                <tr>
+                    <td class="subtractiongame-row6 blue">0</td>
+                    <td class="subtractiongame-row6 red">0</td>
+                    <td class="subtractiongame-row6 green">0</td>
+                    <td class="subtractiongame-row6 yellow">0</td>
+                    <td class="subtractiongame-row6 pink">0</td>
+                    <td class="subtractiongame-row6 bluegreen">0</td>
+
+                </tr>
+
+            </table>
+        </div>
+        <br>
+        <div class="centeritem tabss">
+            <table id="subtractiongamedifference">
+                <tr>
+                    <th>DIFFERENCE</th>
+                    <td class="subtractiongame-difference blue">0</td>
+                    <td class="subtractiongame-difference red">0</td>
+                    <td class="subtractiongame-difference green">0</td>
+                    <td class="subtractiongame-difference yellow">0</td>
+                    <td class="subtractiongame-difference pink">0</td>
+                    <td class="subtractiongame-difference bluegreen">0</td>
+
+                </tr>
+            </table>
+        </div>
+<br>
+<div class="centeritem">
+<label><b>FINAL ANSWER</b>
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="answer"></textarea>
+</label>
+</div>
+<br>
+        <br>
+        <div class="centeritem">
+            <button class="clear" onclick="clear3()">CLEAR</button>
+        </div>
+    </div>
+    <!--multiplication game-->
+    <div id="multiplicationgametab" class="hide tohide">
+
+        <div class="centeritem">
+            <img src="polytabcropped.png" alt="Poly Tab"
+                class="polytabimgsmall">
+        </div>
+        <div class="centeritem">
+            <p id="mulanddiv" class="lebel">MULTIPLICATION||TEACHING MODE</p>
+        </div>
+        <div class="centeritem">
+            <!--INSTRUCTIONS FOR MULTIPLICATION GAME-->
+            <div class="multt"  style="overflow-y:scroll; overflow-x:hidden;">
+                <h3>INSTRUCTIONS:</h3>
+                <div id="instructionformultiplicationgame">
+                    <ol>
+                        <li>	Arrange the polynomial expression in descending order depending on the exponent</li>
+<li>	If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient</li>
+                        <li>	Get the coefficients of each term of the polynomial expressions</li>
+                        
+                        <li>	Enter each coefficient in the corresponding cells</li>
+                        <li>	Complete the multiplication of polynomial table with the correct product of each pair of cells</li>
+                        <li>The product can be entered at the bottom part of the table. Product is the sum of the diagonal cells with same color. <span style="color: red;"><b>PRESS ENTER</b></span> to know if your answer is correct</li>
+                        <li>	To find the final answer, get the numbers in the “Product” tab then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li>
+
+                    </ol>
+               
+             </div>
+
+             <div id="multidivisiongameinstruction" class="hide tohide">
+                <ol>
+                    <li> Arrange the polynomial expression(Dividend and Divisor) in descending order depending on the exponent</li> 
+<li> If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient</li> 
+
+<li> Get the coefficients of each term of the polynomial expressions</li> 
+
+
+
+<li> Enter each coefficient in the corresponding cells. </li> 
+<ol>
+<li> 	Enter the divisor on first column on multiplication of polynomial table.</li> 
+ 
+
+<li> 	Enter the dividend on Dividend Tab.</li> 
+</ol>
+
+<li> To get the quotient;</li> 
+<ol>
+<li> 	get the factor of the first coefficients, one coefficient is given in the divisor(column 1, row 2), enter the other factor at the top part of the table</li> 
+ <li>	Complete the division of polynomial table with the correct product of each pair of cells </li>
+<li> 	The step continues until you use all the coefficients of the dividend</li> 
+</ol>
+
+<li> 	You can use the “Guide” tab to determine the missing number in corresponding diagonal color. The sum of this diagonal color corresponds to the coefficients of the dividend.</li> 
+<li>The product can be entered at the bottom part of the table. Product is the sum of the diagonal cells with same color. <span style="color: red;"><b>PRESS ENTER</b></span> to know if your answer is correct</li>
+<li> 	If the Guide tab turns to all zero number it means that you got the correct answer.</li> 
+
+<li> 	To find the quotient, get the numbers in the first row of the multiplication of polynomial table then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li> 
+
+                </ol>
+            </div>
+            <div id="multifactoringgameinstruction" class="hide tohide" >
+                <ol>
+                    <li> Arrange the polynomial expression in descending order depending on the exponent.</li> 
+<li>If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient.</li> 
+<li>	Get the coefficients of each term of the polynomial expressions.</li> 
+
+<li>	Enter each coefficient in the "Dividend" column.</li> 
+<li>	Set the highest degree of exponent based on the problem given. </li> 
+<li>	To get the factor of the polynomial;</li> 
+<ol>
+<li>	get the factor of the last coefficients.</li> 
+<li>	You can enter the coefficient in "FIND THE FACTOR PAIR/S PART and enter the factors you think. To check if the factor you entered is correct click Check.</li> 
+<li>	Use each number of the factors obtained in Get factor tab, kindly enter each number "What value/s of X will make the polynomial equal to zero?"  tab, click “check”. Once you obtained a “0” value in the checker, it means that number is one of the factor of a given polynomial expression.</li> 
+</ol>
+<li>	After you determine one factor of the polynomial, you can use the “multiplication of polynomial table” to find the other factor. Kindly enter in the first column the corresponding coefficients(don’t forget to equate it to 0) of one factor(i.e. “x – 3 = 0” , use 1 and -3 as the coefficients).</li> 
+<li>	Use the last coefficients as the starting point, look for the other factor in the “Get factor tab” that is paired in the corresponding number in the divisor(other factor). </li> 
+<li>	Continue until your fill all the boxes in the multiplication of polynomial table.</li> 
+
+<li>You can use guide tab as well ( Just remember that guide tab is the difference between the Problem and the Product) </li> 
+<li>	If the Guide tab turns to all zero number it means that you got the correct answer.</li> 
+
+<li>	To find the factors, get the numbers in the first row and first column of the multiplication of polynomial table then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.
+</li>
+                </ol>
+            </div>
+
+            </div>
+        </div>
+
+        <!--FACTOR PAIRS-->
+        <div class="centeritem">
+            <div class="hide tohide" id="multifactorpairsgametab"   style="overflow-y:scroll; overflow-x:hidden;">
+                <div class="centeritem">
+                    <label for="multigametofindthefactor"> FIND THE FACTOR PAIR/S OF :
+                    </div>
+                        <div class="centeritem">
+                        <input type="number" id="multigametofindthefactor"
+                            onchange="document.getElementById('multifactorpairsdetermined').innerHTML=''; document.getElementById('multia').value='';document.getElementById('multib').value ='';"></label>
+                </div>
+                <BR></BR>
+                <div class="centeritem">
+                    <input type="number" id="multia"></div>
+                     <div class="centeritem"><span>&</span></div> 
+                     <div class="centeritem"><input type="number" id="multib">
+                </div>
+
+                <BR></BR>
+                <div class="centeritem">
+                    <button onclick="multicheckiffactors()">Check</button>
+                </div>
+                <div class="centeritem">
+                    <p id="multifactorpairsdetermined"></p>
+                </div>
+                <div class="centeritem">
+                <div  class="hide tohide" id="multifactoringtab">
+                <div class="centeritem">
+                    <label for="multihighestgameexp">Highest Degree of Exponent</label>
+</div>
+ <div class="centeritem">
+                    <select name="multihighestgameexp" id="multihighestgameexp">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+
+                <div class="centeritem">
+                    <br>
+                    <br>
+                    <label for="multifactoringgamevalue">What value/s of X will make the polynomial equal to zero?</label>
+                    <br>
+                </div>
+<br>
+                <div class="centeritem">
+                    <br>
+                    <input type="number" name="multifactoringgamevalue" id="multifactoringgamevalue">
+
+                </div>
+                <div class="centeritem">
+                    <br>
+                    <button onclick="multifactoringgamechecker()">CHECK</button>
+                </div>
+                <div class="centeritem">
+                    <br>
+                    <p><span>Checker:</span><span id="multifactoringcheckeranswer">____</span></p>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <br>
+<div class="centeritem">
+<label>PROBLEM
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="problemtext"></textarea>
+</label>
+</div>
+<br>
+
+        <div class="centeritem tabss">
+            <table id="table-multiplicationgame">
+                <tr>
+                    <th colspan="11" id="multititle">MULTIPLICATION OF POLYNOMIALS</th>
+                </tr>
+                <tr>
+                    <th>X</th>
+                    <td class="multiplicationgame-top">0</td>
+                    <td class="multiplicationgame-top">0</td>
+                    <td class="multiplicationgame-top">0</td>
+                    <td class="multiplicationgame-top">0</td>
+                    <td class="multiplicationgame-top">0</td>
+
+
+                </tr>
+                <tr>
+                    <td class="multiplicationgame-side">0</td>
+                    <td class="multiplicationgame-row1 multiplicationgame-column1 blue">0</td>
+                    <td class="multiplicationgame-row1 multiplicationgame-column2 red">0</td>
+                    <td class="multiplicationgame-row1 multiplicationgame-column3 green">0</td>
+                    <td class="multiplicationgame-row1 multiplicationgame-column4 yellow">0</td>
+                    <td class="multiplicationgame-row1 multiplicationgame-column5 pink">0</td>
+
+
+                </tr>
+                <tr>
+                    <td class="multiplicationgame-side">0</td>
+                    <td class="multiplicationgame-row2 multiplicationgame-column1 red">0</td>
+                    <td class="multiplicationgame-row2 multiplicationgame-column2 green">0</td>
+                    <td class="multiplicationgame-row2 multiplicationgame-column3 yellow">0</td>
+                    <td class="multiplicationgame-row2 multiplicationgame-column4 pink">0</td>
+                    <td class="multiplicationgame-row2 multiplicationgame-column5 bluegreen">0</td>
+
+
+                </tr>
+                <tr>
+                    <td class="multiplicationgame-side">0</td>
+                    <td class="multiplicationgame-row3 multiplicationgame-column1 green">0</td>
+                    <td class="multiplicationgame-row3 multiplicationgame-column2 yellow">0</td>
+                    <td class="multiplicationgame-row3 multiplicationgame-column3 pink">0</td>
+                    <td class="multiplicationgame-row3 multiplicationgame-column4 bluegreen">0</td>
+                    <td class="multiplicationgame-row3 multiplicationgame-column5 violet">0</td>
+
+
+                <tr>
+                    <td class="multiplicationgame-side">0</td>
+                    <td class="multiplicationgame-row4 multiplicationgame-column1 yellow">0</td>
+                    <td class="multiplicationgame-row4 multiplicationgame-column2 pink">0</td>
+                    <td class="multiplicationgame-row4 multiplicationgame-column3 bluegreen">0</td>
+                    <td class="multiplicationgame-row4 multiplicationgame-column4 violet">0</td>
+                    <td class="multiplicationgame-row4 multiplicationgame-column5 orange">0</td>
+
+                </tr>
+                <tr>
+                    <td class="multiplicationgame-side">0</td>
+                    <td class="multiplicationgame-row5 multiplicationgame-column1 pink">0</td>
+                    <td class="multiplicationgame-row5 multiplicationgame-column2 bluegreen">0</td>
+                    <td class="multiplicationgame-row5 multiplicationgame-column3 violet">0</td>
+                    <td class="multiplicationgame-row5 multiplicationgame-column4 orange">0</td>
+                    <td class="multiplicationgame-row5 multiplicationgame-column5 yellowgreen">0</td>
+
+
+                </tr>
+
+
+            </table>
+        </div>
+
+        <div class="centeritem tabss">
+            <table id="multiplicationgameproduct">
+                <tr>
+                    <th>PRODUCT</th>
+                    <td class="multiplicationgame-product blue">0</td>
+                    <td class="multiplicationgame-product red">0</td>
+                    <td class="multiplicationgame-product green">0</td>
+                    <td class="multiplicationgame-product yellow">0</td>
+                    <td class="multiplicationgame-product pink">0</td>
+                    <td class="multiplicationgame-product bluegreen">0</td>
+                    <td class="multiplicationgame-product violet">0</td>
+                    <td class="multiplicationgame-product orange">0</td>
+                    <td class="multiplicationgame-product yellowgreen">0</td>
+
+                </tr>
+
+
+            </table>
+        </div>
+
+        <div class="centeritem tabss">
+            <table id="multiplicationgameproductdivisor" class="hide tohide">
+                <tr>
+                    <th>DIVIDEND</th>
+                    <td class="multiplicationgame-divisor blue">0</td>
+                    <td class="multiplicationgame-divisor red">0</td>
+                    <td class="multiplicationgame-divisor green">0</td>
+                    <td class="multiplicationgame-divisor yellow">0</td>
+                    <td class="multiplicationgame-divisor pink">0</td>
+                    <td class="multiplicationgame-divisor bluegreen">0</td>
+                    <td class="multiplicationgame-divisor violet">0</td>
+                    <td class="multiplicationgame-divisor orange">0</td>
+                    <td class="multiplicationgame-divisor yellowgreen">0</td>
+
+                </tr>
+                <tr>
+                    <th>GUIDE</th>
+                    <td class="multiplicationgame-Guider">0</td>
+                    <td class="multiplicationgame-Guider">0</td>
+                    <td class="multiplicationgame-Guider">0</td>
+                    <td class="multiplicationgame-Guider">0</td>
+                    <td class="multiplicationgame-Guider">0</td>
+                    <td class="multiplicationgame-Guider">0</td>
+                    <td class="multiplicationgame-Guider">0</td>
+                    <td class="multiplicationgame-Guider">0</td>
+                    <td class="multiplicationgame-Guider">0</td>
+
+                </tr>
+
+            </table>
+        </div>
+        <br>
+<div class="centeritem">
+<label><b>FINAL ANSWER</b>
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="answer"></textarea>
+</label>
+</div>
+<br>
+        <br>
+        <div class="centeritem">
+
+            <button class="clear" onclick="clear3()">CLEAR</button>
+        </div>
+    </div>
+
+    <!--division game-->
+
+    <div id="divisiongametab" class="hide tohide">
+        <div class="centeritem">
+            <img src="polytabcropped.png" alt="Poly Tab"
+                class="polytabimgsmall">
+        </div>
+        <div class="centeritem">
+            <p id="divorfactlabel" class="lebel">DIVITION||TEACHING MODE</p>
+        </div>
+        <div class="centeritem">
+            <div class="factoss" style="overflow-y:scroll; overflow-x:hidden;">
+                <h3>INSTRUCTIONS:</h3>
+                <div id="divisiongameinstruction" class="hide tohide">
+                    <ol>
+                        <li> Arrange the polynomial expression(Dividend and Divisor) in descending order depending on the exponent</li> 
+<li> If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient</li> 
+
+<li> Get the coefficients of each term of the polynomial expressions</li> 
+
+
+
+<li> Enter each coefficient in the corresponding cells. </li> 
+<ol>
+<li> 	Enter the divisor on first column on multiplication of polynomial table.</li> 
+<li> 	Enter the dividend on Dividend column.</li> 
+</ol>
+
+<li> To get the quotient;</li> 
+<ol>
+<li> 	get the factor of the first coefficients, one coefficient is given in the divisor(column 1, row 2), enter the other factor at the top part of the table</li> 
+<li> 	The step continues until you use all the coefficients of the dividend</li> 
+</ol>
+<li> 	You can use the “Guide” tab to determine the missing number in corresponding diagonal color. The sum of this diagonal color corresponds to the coefficients of the dividend.</li> 
+<li> 	If the Guide tab turns to all zero number it means that you got the correct answer.</li> 
+
+<li> 	To find the quotient, get the numbers in the first row of the multiplication of polynomial table then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.</li> 
+
+                    </ol>
+                </div>
+                <div id="factoringgameinstruction" class="hide tohide" >
+                    <ol>
+                        <li> Arrange the polynomial expression in descending order depending on the exponent.</li> 
+<li>If one term is missing (i.e Ax3 + Cx + D => Bx2 is missing) put 0 as its coefficient.</li> 
+<li>	Get the coefficients of each term of the polynomial expressions.</li> 
+
+<li>	Enter each coefficient in the "Dividend" column.</li> 
+<li>	Set the highest degree of exponent based on the problem given. </li> 
+<li>	To get the factor of the polynomial;</li> 
+<ol>
+<li>	get the factor of the last coefficients.</li> 
+<li>	You can enter the coefficient in "FIND THE FACTOR PAIR/S PART and enter the factors you think. To check if the factor you entered is correct click Check.</li> 
+<li>	Use each number of the factors obtained in Get factor tab, kindly enter each number "What value/s of X will make the polynomial equal to zero?"  tab, click “check”. Once you obtained a “0” value in the checker, it means that number is one of the factor of a given polynomial expression.</li> 
+</ol>
+<li>	After you determine one factor of the polynomial, you can use the “multiplication of polynomial table” to find the other factor. Kindly enter in the first column the corresponding coefficients(don’t forget to equate it to 0) of one factor(i.e. “x – 3 = 0” , use 1 and -3 as the coefficients).</li> 
+<li>	Use the last coefficients as the starting point, look for the other factor in the “Get factor tab” that is paired in the corresponding number in the divisor(other factor). </li> 
+<li>	Continue until your fill all the boxes in the multiplication of polynomial table.</li> 
+
+<li>You can use guide tab as well ( Just remember that guide tab is the difference between the Problem and the Product) </li> 
+<li>	If the Guide tab turns to all zero number it means that you got the correct answer.</li> 
+
+
+<li>	To find the factors, get the numbers in the first row and first column of the multiplication of polynomial table then add the literal coefficients by writing “x” in each numeral coefficients except the last coefficient. Add a descending exponent in every literal coefficients x.
+</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+      
+        <div class="centeritem">
+            <div class="hide tohide" id="factorpairsgametab">
+                <div class="centeritem">
+                    <label for="gametofindthefactor"> FIND THE FACTOR PAIR/S OF :
+
+</div>
+<div class="centeritem">
+<input type="number" id="gametofindthefactor"
+onchange="document.getElementById('factorpairsdetermined').innerHTML=''; document.getElementById('a').value='';document.getElementById('b').value ='';">
+</label>
+                </div>
+                <BR></BR>
+                <div class="centeritem">
+                    <input type="number" id="a"> </div><div class="centeritem"><span>&</span></div> <div class="centeritem"><input type="number" id="b">
+                </div>
+                <BR></BR>
+                <div class="centeritem">
+                    <button onclick="checkiffactors()">CHECK</button>
+                </div>
+                <div class="centeritem">
+                    <p id="factorpairsdetermined"></p>
+                </div>
+<div class=" hide tohide" id="checkertablabel">
+                <div class="centeritem">
+                    <label for="highestgameexp">Highest Degree of Exponent</label>
+
+                    <select name="highestgameexp" id="highestgameexp">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+
+                <div class="centeritem">
+                    <br>
+                    <br>
+                    <label for="factoringgamevalue">What value/s of X will make the polynomial equal to zero?</label>
+                </div>
+                <div class="centeritem">
+                    <br>
+                    <input type="number" name="factoringgamevalue" id="factoringgamevalue">
+
+                </div>
+                <div class="centeritem">
+                    <br>
+                    <button onclick="factoringgamechecker()">CHECK</button>
+                </div>
+                <div class="centeritem">
+                    <br>
+                    <p><span>Checker:</span><span id="factoringcheckeranswer">____</span></p>
+                </div>
+</div>
+            </div>
+        </div>
+<div class="centeritem">
+<label>PROBLEM
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="problemtext"></textarea>
+</label>
+</div>
+<br>
+        <div class="centeritem tabss">
+            <table id="table-divisiongame">
+                <tr>
+                    <th id="factoringgamelabel" colspan="11">DIVISION OF POLYNOMIALS</th>
+                </tr>
+                <tr>
+                    <th>X</th>
+                    <td class="divisiongame-top">0</td>
+                    <td class="divisiongame-top">0</td>
+                    <td class="divisiongame-top">0</td>
+                    <td class="divisiongame-top">0</td>
+                    <td class="divisiongame-top">0</td>
+
+                </tr>
+                <tr>
+                    <td class="divisiongame-side">0</td>
+                    <td class="divisiongame-row1 divisiongame-column1 blue">0</td>
+                    <td class="divisiongame-row1 divisiongame-column2 red">0</td>
+                    <td class="divisiongame-row1 divisiongame-column3 green">0</td>
+                    <td class="divisiongame-row1 divisiongame-column4 yellow">0</td>
+                    <td class="divisiongame-row1 divisiongame-column5 pink">0</td>
+
+                </tr>
+                <tr>
+                    <td class="divisiongame-side">0</td>
+                    <td class="divisiongame-row2 divisiongame-column1 red">0</td>
+                    <td class="divisiongame-row2 divisiongame-column2 green">0</td>
+                    <td class="divisiongame-row2 divisiongame-column3 yellow">0</td>
+                    <td class="divisiongame-row2 divisiongame-column4 pink">0</td>
+                    <td class="divisiongame-row2 divisiongame-column5 bluegreen">0</td>
+
+                <tr>
+                    <td class="divisiongame-side">0</td>
+                    <td class="divisiongame-row3 divisiongame-column1 green">0</td>
+                    <td class="divisiongame-row3 divisiongame-column2 yellow">0</td>
+                    <td class="divisiongame-row3 divisiongame-column3 pink">0</td>
+                    <td class="divisiongame-row3 divisiongame-column4 bluegreen">0</td>
+                    <td class="divisiongame-row3 divisiongame-column5 violet">0</td>
+
+                <tr>
+                    <td class="divisiongame-side">0</td>
+                    <td class="divisiongame-row4 divisiongame-column1 yellow">0</td>
+                    <td class="divisiongame-row4 divisiongame-column2 pink">0</td>
+                    <td class="divisiongame-row4 divisiongame-column3 bluegreen">0</td>
+                    <td class="divisiongame-row4 divisiongame-column4 violet">0</td>
+                    <td class="divisiongame-row4 divisiongame-column5 orange">0</td>
+
+                </tr>
+                <tr>
+                    <td class="divisiongame-side">0</td>
+                    <td class="divisiongame-row5 divisiongame-column1 pink">0</td>
+                    <td class="divisiongame-row5 divisiongame-column2 bluegreen">0</td>
+                    <td class="divisiongame-row5 divisiongame-column3 violet">0</td>
+                    <td class="divisiongame-row5 divisiongame-column4 orange">0</td>
+                    <td class="divisiongame-row5 divisiongame-column5 yellowgreen">0</td>
+
+                </tr>
+
+            </table>
+        </div>
+        <br>
+        <div class="centeritem tabss">
+            <table id="divisiongamequotient">
+                <tr>
+                    <th>PRODUCT</th>
+                    <td class="divisiongame-quotient blue">0</td>
+                    <td class="divisiongame-quotient red">0</td>
+                    <td class="divisiongame-quotient green">0</td>
+                    <td class="divisiongame-quotient yellow">0</td>
+                    <td class="divisiongame-quotient pink">0</td>
+                    <td class="divisiongame-quotient bluegreen">0</td>
+                    <td class="divisiongame-quotient violet">0</td>
+                    <td class="divisiongame-quotient orange">0</td>
+                    <td class="divisiongame-quotient yellowgreen">0</td>
+
+                </tr>
+
+
+            </table>
+        </div>
+        <br>
+        <br>
+        <div class="centeritem tabss">
+            <table id="divisiongameproblemtable">
+                <tr>
+                    <th>DIVIDEND</th>
+                    <td class="divisionproblemgame blue">0</td>
+                    <td class="divisionproblemgame red">0</td>
+                    <td class="divisionproblemgame green">0</td>
+                    <td class="divisionproblemgame yellow">0</td>
+                    <td class="divisionproblemgame pink">0</td>
+                    <td class="divisionproblemgame bluegreen">0</td>
+                    <td class="divisionproblemgame violet">0</td>
+                    <td class="divisionproblemgame orange">0</td>
+                    <td class="divisionproblemgame yellowgreen">0</td>
+
+                </tr>
+                <tr>
+                    <th>GUIDE</th>
+                    <td class="divisionproblemgameguide">0</td>
+                    <td class="divisionproblemgameguide">0</td>
+                    <td class="divisionproblemgameguide">0</td>
+                    <td class="divisionproblemgameguide">0</td>
+                    <td class="divisionproblemgameguide">0</td>
+                    <td class="divisionproblemgameguide">0</td>
+                    <td class="divisionproblemgameguide">0</td>
+                    <td class="divisionproblemgameguide">0</td>
+                    <td class="divisionproblemgameguide">0</td>
+
+                </tr>
+
+            </table>
+
+        </div>
+<br>
+<div class="centeritem">
+<label><b>FINAL ANSWER</b>
+</div>
+<div class="centeritem">
+<textarea name="Problem" class="answer"></textarea>
+</label>
+</div>
+<br>
+        <br>
+        <div class="centeritem">
+            <button onclick="divisiongamecheck()" class="check">CHECK</button>
+ 
+            <button class="clear" onclick="clear3()">CLEAR</button>
+        </div>
+        <br>
+    </div>
+
+
+    <div id="positivemessage">
+        <p>That's Right! Keep it up!😀👏</p>
+    </div>
+    <div id="negativemessage">
+        <p>Don't lose hope! Try again!😉😉</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
